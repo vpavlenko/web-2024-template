@@ -23,7 +23,11 @@ git add . && git commit -m 'new commit'
 npm run deploy && git push origin main
 ```
 
-Then enable the website link on Github:
+Then enable the website link on Github: click "Use your GitHub Pages website":
+
+<img width="27" alt="Screenshot 2024-09-29 at 19 36 35" src="https://github.com/user-attachments/assets/0cfd6377-5595-4366-9094-0eff8c1659ca">
+→
+<img width="254" alt="Screenshot 2024-09-29 at 19 36 20" src="https://github.com/user-attachments/assets/3ecab6a7-9f0d-4033-9b7b-a5d22a2927dd">
 
 # React + TypeScript + Vite
 
