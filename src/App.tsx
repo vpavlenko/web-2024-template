@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
 import {
   Container,
   Typography,
@@ -18,19 +19,10 @@ interface Todo {
 }
 
 function App() {
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useLocalStorageState<Todo[]>("todos", {
+    defaultValue: [],
+  });
   const [newTodo, setNewTodo] = useState("");
-
-  useEffect(() => {
-    const storedTodos = localStorage.getItem("todos");
-    if (storedTodos) {
-      setTodos(JSON.parse(storedTodos));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
 
   const handleAddTodo = () => {
     if (newTodo.trim() !== "") {
