@@ -1,10 +1,29 @@
 # Web 2024 Template
 
+Fork this repo.
+
+Then git clone it locally:
+
 ```
-git clone https://github.com/vpavlenko/web-2024-preview.git
+git clone git@github.com:YOUR-USERNAME/web-2024-template.git
+```
+
+Then:
+
+```
+cd web-2024-template/
 npm install
+npm run dev
+```
+
+Once you've changed anything, you can deploy to gh-pages with:
+
+```
+git add . && git commit -m 'new commit'
 npm run deploy && git push origin main
 ```
+
+Then enable the website link on Github:
 
 # React + TypeScript + Vite
 
