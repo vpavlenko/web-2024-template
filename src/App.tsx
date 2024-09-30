@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useLocalStorageState from "use-local-storage-state";
+import styled from "styled-components";
 import {
-  Container,
   Typography,
   TextField,
   Button,
@@ -20,6 +20,25 @@ interface Todo {
   text: string;
   done: boolean;
 }
+
+const AppContainer = styled.div`
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+`;
+
+const StyledButton = styled(Button)`
+  && {
+    margin-top: 1rem;
+  }
+`;
+
+const StyledListItemText = styled(ListItemText)<{ done: boolean }>`
+  && {
+    text-decoration: ${(props) => (props.done ? "line-through" : "none")};
+  }
+`;
 
 function App() {
   const [todos, setTodos] = useLocalStorageState<Todo[]>("todos", {
@@ -64,7 +83,7 @@ function App() {
   };
 
   return (
-    <Container maxWidth="sm">
+    <AppContainer>
       <Typography variant="h4" component="h1" gutterBottom>
         Todo List
       </Typography>
@@ -76,15 +95,14 @@ function App() {
         onChange={(e) => setNewTodo(e.target.value)}
         onKeyPress={(e) => e.key === "Enter" && handleAddTodo()}
       />
-      <Button
+      <StyledButton
         variant="contained"
         color="primary"
         fullWidth
         onClick={handleAddTodo}
-        style={{ marginTop: "1rem" }}
       >
         Add Todo
-      </Button>
+      </StyledButton>
       <List>
         {todos.map((todo) => (
           <ListItem key={todo.id} dense>
@@ -103,10 +121,7 @@ function App() {
                 autoFocus
               />
             ) : (
-              <ListItemText
-                primary={todo.text}
-                style={{ textDecoration: todo.done ? "line-through" : "none" }}
-              />
+              <StyledListItemText primary={todo.text} done={todo.done} />
             )}
             <ListItemSecondaryAction>
               <IconButton
@@ -127,7 +142,7 @@ function App() {
           </ListItem>
         ))}
       </List>
-    </Container>
+    </AppContainer>
   );
 }
 
