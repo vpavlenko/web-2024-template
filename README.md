@@ -1,6 +1,9 @@
 # Web 2024 Template
 
-Fork this repo.
+Fork this repo:
+
+<img width="1191" alt="Screenshot 2024-09-30 at 22 04 00" src="https://github.com/user-attachments/assets/9f31a473-30c9-4e3b-abc7-69edd4011459">
+
 
 Then git clone it locally:
 
