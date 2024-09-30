@@ -33,7 +33,7 @@ npm run dev
 
 ## Make changes
 
-Open src/App.tsx, then press Cmd+I (or Ctrl+I), then type your request. Eg.
+Open `src/App.tsx`, then press Cmd+I (or Ctrl+I), then type your request. Eg.
 ```
 Instead of a todo list app, make an app to store and edit recipes for dishes.
 Allow to recalculate number of portions for each dish.
@@ -69,10 +69,11 @@ You should see your changes live.
 
 ## Tips
 
-- Break down functionality into smallest possible bits. Don't bundle several unrelated features: if you get an error, you'll lose more time
-- Once a Cursor made any small step in the right direction - commit and push
-- If Cursor broke things: better Reject All and start from the last commit
+- Break down new functionality into smallest possible bits. Don't bundle several unrelated features: if you get an error, you'll lose more time
+- Once a Cursor made any small step in the right direction - commit
 - Press "+" to start a new Composer and erase unnecessary previous context. Cursor knows what you did before because it looks into the current code
+- If Cursor broke things: either Reject All, press "+" and start from the last commit; or try 2-3 attempts at sending error messages to it and ask to fix
+- Ask Cursor to add a debug output and paste it to composer
 - Read about [features](https://www.cursor.com/features)
 - Read [the docs](https://docs.cursor.com/)
 - https://github.com/PatrickJS/awesome-cursorrules
