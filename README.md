@@ -1,3 +1,14 @@
+# How to Cursor in React
+
+This template allows you to run it locally in a Cursor IDE, replace it with your logic and deploy to web - in minutes.
+
+## Get the tools ready
+
+1. [Install Node.js](https://nodejs.org/en/download/prebuilt-installer)
+   - On Windows, do it directly to Windows, NOT to WSL-Ubuntu.
+   - Don't try installing via your package manager, or you can get an outdated Node version like v12. You need at least v18 for Vite.
+3. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update 
+
 
 ## Run locally
 Fork this repo:
@@ -56,4 +67,11 @@ Then enable the website link on Github: click "Use your GitHub Pages website":
 - Once a Cursor made any small step in the right direction - commit and push
 - If Cursor broke things: better Reject All and start from the last commit
 - Press "+" to start a new Composer and erase unnecessary previous context. Cursor knows what you did before because it looks into the current code
+- Read [/features](https://www.cursor.com/features)
+- Log into Github (for publishing repos)
+6. Log into [Claude](https://claude.ai/) (for asking third-party questions related to Git & life)
+
+# This is so tough, can I do it simpler?
+
+You can try [Replit Agent](https://docs.replit.com/replitai/agent), although this will cost you $25. UI-wise, it's mind-blowing. However, it's not guaranteed you'll be able to get your features implemented rapidly in it. It's 2024, LLMs can still be silly.
 
