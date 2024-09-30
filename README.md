@@ -1,5 +1,6 @@
 # Web 2024 Template
 
+## Run locally
 Fork this repo:
 
 <img width="1191" alt="Screenshot 2024-09-30 at 22 04 00" src="https://github.com/user-attachments/assets/9f31a473-30c9-4e3b-abc7-69edd4011459">
@@ -11,13 +12,28 @@ Then git clone it locally:
 git clone git@github.com:YOUR-USERNAME/web-2024-template.git
 ```
 
-Then:
+Then open this folder in Cursor and do smth like:
 
 ```
 cd web-2024-template/
 npm install
 npm run dev
 ```
+## Make changes
+
+Open src/App.tsx, then press Cmd+I (or Ctrl+I), then type your request. Eg.
+```
+Instead of a todo list app, make an app to store and edit recipes for dishes.
+Allow to recalculate number of portions for each dish.
+Populate with 5 boilerplate dishes.
+Make funky styling.
+```
+
+Try writing in your mother tongue - it may work out, idk.
+
+Hit Enter, then once it's done - hit Acccept All and reload your live demo in the browser.
+
+## Deploy
 
 Once you've changed anything, you can deploy to gh-pages with:
 
