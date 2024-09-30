@@ -10,12 +10,15 @@ import {
   ListItemText,
   ListItemSecondaryAction,
   IconButton,
+  Checkbox,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 
 interface Todo {
   id: number;
   text: string;
+  done: boolean;
 }
 
 function App() {
@@ -23,16 +26,41 @@ function App() {
     defaultValue: [],
   });
   const [newTodo, setNewTodo] = useState("");
+  const [editingId, setEditingId] = useState<number | null>(null);
 
   const handleAddTodo = () => {
     if (newTodo.trim() !== "") {
-      setTodos([...todos, { id: Date.now(), text: newTodo.trim() }]);
+      setTodos([
+        ...todos,
+        { id: Date.now(), text: newTodo.trim(), done: false },
+      ]);
       setNewTodo("");
     }
   };
 
   const handleDeleteTodo = (id: number) => {
     setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
+  const handleToggleTodo = (id: number) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, done: !todo.done } : todo
+      )
+    );
+  };
+
+  const handleEditTodo = (id: number) => {
+    setEditingId(id);
+  };
+
+  const handleUpdateTodo = (id: number, newText: string) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, text: newText.trim() } : todo
+      )
+    );
+    setEditingId(null);
   };
 
   return (
@@ -59,9 +87,35 @@ function App() {
       </Button>
       <List>
         {todos.map((todo) => (
-          <ListItem key={todo.id}>
-            <ListItemText primary={todo.text} />
+          <ListItem key={todo.id} dense>
+            <Checkbox
+              edge="start"
+              checked={todo.done}
+              onChange={() => handleToggleTodo(todo.id)}
+            />
+            {editingId === todo.id ? (
+              <TextField
+                fullWidth
+                value={todo.text}
+                onChange={(e) => handleUpdateTodo(todo.id, e.target.value)}
+                onBlur={() => setEditingId(null)}
+                onKeyPress={(e) => e.key === "Enter" && setEditingId(null)}
+                autoFocus
+              />
+            ) : (
+              <ListItemText
+                primary={todo.text}
+                style={{ textDecoration: todo.done ? "line-through" : "none" }}
+              />
+            )}
             <ListItemSecondaryAction>
+              <IconButton
+                edge="end"
+                aria-label="edit"
+                onClick={() => handleEditTodo(todo.id)}
+              >
+                <EditIcon />
+              </IconButton>
               <IconButton
                 edge="end"
                 aria-label="delete"
