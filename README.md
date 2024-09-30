@@ -1,6 +1,6 @@
 # How to Cursor in React
 
-This template allows you to run it locally in a Cursor IDE, replace it with your logic and deploy to web - in minutes.
+This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor IDE, replace it with your logic and deploy to web - in minutes.
 
 ## Get the tools ready
 
