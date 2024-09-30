@@ -1,4 +1,3 @@
-# Web 2024 Template
 
 ## Run locally
 Fork this repo:
@@ -19,6 +18,7 @@ cd web-2024-template/
 npm install
 npm run dev
 ```
+
 ## Make changes
 
 Open src/App.tsx, then press Cmd+I (or Ctrl+I), then type your request. Eg.
@@ -44,13 +44,15 @@ npm run deploy && git push origin main
 
 Then enable the website link on Github: click "Use your GitHub Pages website":
 
-<img width="27" alt="Screenshot 2024-09-29 at 19 36 35" src="https://github.com/user-attachments/assets/0cfd6377-5595-4366-9094-0eff8c1659ca">
-→
-<img width="254" alt="Screenshot 2024-09-29 at 19 36 20" src="https://github.com/user-attachments/assets/3ecab6a7-9f0d-4033-9b7b-a5d22a2927dd">
+<img width="1086" alt="Screenshot 2024-09-30 at 22 14 15" src="https://github.com/user-attachments/assets/6fa99fc3-c359-4113-b328-7c5da738eb7c">
+
+<img width="1137" alt="Screenshot 2024-09-30 at 22 15 58" src="https://github.com/user-attachments/assets/1dd5b7d8-4478-4693-bf84-0a466ebbfbda">
+
+<img width="1047" alt="Screenshot 2024-09-30 at 23 40 09" src="https://github.com/user-attachments/assets/178195be-f8fb-40fd-931f-d4b22c923766">
 
 ## Tips
 
-- Break down functionality into smallest possible bits. Don't bundle several unrelated features: you'll increase the probability of an app crash and your lost time
+- Break down functionality into smallest possible bits. Don't bundle several unrelated features: if you get an error, you'll lose more time
 - Once a Cursor made any small step in the right direction - commit and push
 - If Cursor broke things: better Reject All and start from the last commit
 - Press "+" to start a new Composer and erase unnecessary previous context. Cursor knows what you did before because it looks into the current code
