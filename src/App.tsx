@@ -55,8 +55,8 @@ function App() {
         { id: 3, text: "Log into Github", done: false },
         { id: 4, text: "Fork a repo", done: false },
         { id: 5, text: "Make changes", done: false },
-        { id: 5, text: "Commit", done: false },
-        { id: 5, text: "Deploy", done: false },
+        { id: 6, text: "Commit", done: false },
+        { id: 7, text: "Deploy", done: false },
       ];
       setTodos(boilerplateTodos);
     }
@@ -109,6 +109,7 @@ function App() {
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
         onKeyPress={(e) => e.key === "Enter" && handleAddTodo()}
+        autoFocus // Add this line to enable autofocus
       />
       <StyledButton
         variant="contained"
