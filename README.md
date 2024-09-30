@@ -7,7 +7,8 @@ This template allows you to run it locally in a Cursor IDE, replace it with your
 1. [Install Node.js](https://nodejs.org/en/download/prebuilt-installer)
    - On Windows, do it directly to Windows, NOT to WSL-Ubuntu.
    - Don't try installing via your package manager, or you can get an outdated Node version like v12. You need at least v18 for Vite.
-3. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update 
+3. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
+4. Log into Github
 
 
 ## Run locally
@@ -67,9 +68,10 @@ Then enable the website link on Github: click "Use your GitHub Pages website":
 - Once a Cursor made any small step in the right direction - commit and push
 - If Cursor broke things: better Reject All and start from the last commit
 - Press "+" to start a new Composer and erase unnecessary previous context. Cursor knows what you did before because it looks into the current code
-- Read [/features](https://www.cursor.com/features)
-- Log into Github (for publishing repos)
-6. Log into [Claude](https://claude.ai/) (for asking third-party questions related to Git & life)
+- Read about [features](https://www.cursor.com/features)
+- Read [the docs](https://docs.cursor.com/)
+- https://github.com/PatrickJS/awesome-cursorrules
+- https://cursor.directory/
 
 # This is so tough, can I do it simpler?
 
