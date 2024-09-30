@@ -78,11 +78,6 @@ You should see your changes live.
 - https://github.com/PatrickJS/awesome-cursorrules
 - https://cursor.directory/
 
-## What prompts did I use to code this?
-
-After a certain version, I did the following:
-
-
 
 # This is so tough, can I do it simpler?
 
