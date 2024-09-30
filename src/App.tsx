@@ -46,6 +46,7 @@ function App() {
   });
   const [newTodo, setNewTodo] = useState("");
   const [editingId, setEditingId] = useState<number | null>(null);
+  const [editText, setEditText] = useState(""); // Add this line
 
   useEffect(() => {
     if (todos.length === 0) {
@@ -86,15 +87,22 @@ function App() {
 
   const handleEditTodo = (id: number) => {
     setEditingId(id);
+    const todoToEdit = todos.find((todo) => todo.id === id);
+    if (todoToEdit) {
+      setEditText(todoToEdit.text);
+    }
   };
 
-  const handleUpdateTodo = (id: number, newText: string) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, text: newText.trim() } : todo
-      )
-    );
+  const handleUpdateTodo = (id: number) => {
+    if (editText.trim() !== "") {
+      setTodos(
+        todos.map((todo) =>
+          todo.id === id ? { ...todo, text: editText.trim() } : todo
+        )
+      );
+    }
     setEditingId(null);
+    setEditText("");
   };
 
   return (
@@ -130,10 +138,12 @@ function App() {
             {editingId === todo.id ? (
               <TextField
                 fullWidth
-                value={todo.text}
-                onChange={(e) => handleUpdateTodo(todo.id, e.target.value)}
-                onBlur={() => setEditingId(null)}
-                onKeyPress={(e) => e.key === "Enter" && setEditingId(null)}
+                value={editText}
+                onChange={(e) => setEditText(e.target.value)}
+                onBlur={() => handleUpdateTodo(todo.id)}
+                onKeyPress={(e) =>
+                  e.key === "Enter" && handleUpdateTodo(todo.id)
+                }
                 autoFocus
               />
             ) : (
