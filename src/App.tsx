@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useLocalStorageState from "use-local-storage-state";
 import styled from "styled-components";
 import {
@@ -46,6 +46,21 @@ function App() {
   });
   const [newTodo, setNewTodo] = useState("");
   const [editingId, setEditingId] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (todos.length === 0) {
+      const boilerplateTodos = [
+        { id: 1, text: "Install Node.js", done: false },
+        { id: 2, text: "Install Cursor IDE", done: false },
+        { id: 3, text: "Log into Github", done: false },
+        { id: 4, text: "Fork a repo", done: false },
+        { id: 5, text: "Make changes", done: false },
+        { id: 5, text: "Commit", done: false },
+        { id: 5, text: "Deploy", done: false },
+      ];
+      setTodos(boilerplateTodos);
+    }
+  }, [todos, setTodos]);
 
   const handleAddTodo = () => {
     if (newTodo.trim() !== "") {
