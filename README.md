@@ -75,3 +75,14 @@ Then enable the website link on Github: click "Use your GitHub Pages website":
 
 You can try [Replit Agent](https://docs.replit.com/replitai/agent), although this will cost you $25. UI-wise, it's mind-blowing. However, it's not guaranteed you'll be able to get your features implemented rapidly in it. It's 2024, LLMs can still be silly.
 
+# Do I need a backend?
+
+Do you?
+
+If you simply want to persist data, ask Cursor to save data in local storage. 
+
+If you need to persist it across users or devices, ask Cursor to use [Firestore](https://firebase.google.com/)
+
+If you need authorization, ask Cursor to use [Firebase Authentication](https://firebase.google.com/)
+
+If you need a logic to process user's data on the backend - start with [Firebase Cloud Functions](https://firebase.google.com/)
