@@ -78,6 +78,12 @@ You should see your changes live.
 - https://github.com/PatrickJS/awesome-cursorrules
 - https://cursor.directory/
 
+## What prompts did I use to code this?
+
+After a certain version, I did the following:
+
+
+
 # This is so tough, can I do it simpler?
 
 You can try [Replit Agent](https://docs.replit.com/replitai/agent), although this will cost you $25. UI-wise, it's mind-blowing. However, it's not guaranteed you'll be able to get your features implemented rapidly in it. It's 2024, LLMs can still be silly.
