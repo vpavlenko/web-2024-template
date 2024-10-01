@@ -90,6 +90,7 @@ You should see your changes live.
 - Ask Cursor to add a debug UI at the right place in your application. Ask to print out all relevant app state there
 - Read about [features](https://www.cursor.com/features)
 - Read [the docs](https://docs.cursor.com/)
+- https://cursorcasts.com/
 - https://github.com/PatrickJS/awesome-cursorrules
 - https://cursor.directory/
 - https://v0.dev/ and shadcn
