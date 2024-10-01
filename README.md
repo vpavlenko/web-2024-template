@@ -34,6 +34,8 @@ npm install
 npm run dev
 ```
 
+The open the link it gives (with localhost:5137) in your browser.
+
 ## Make changes
 
 Open `src/App.tsx`, then press Cmd+I (or Ctrl+I), then type your request. Eg.
