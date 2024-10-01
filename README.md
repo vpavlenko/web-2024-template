@@ -43,7 +43,7 @@ Populate with 5 boilerplate dishes.
 Make funky styling.
 ```
 
-Try writing in your mother tongue - it may work out, idk.
+You can write your mother tounge (Georgian, Ukrainian etc.) - it'll understand
 
 Hit Enter, then once it's done - hit Acccept All and reload your live demo in the browser.
 
