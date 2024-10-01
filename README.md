@@ -60,7 +60,7 @@ You may try to commit using `@commit` command from Composer.
 
 ## Deploy
 
-In the Cursor IDE, open a Terminal and run:
+In the Cursor IDE, open a separate Terminal and run:
 
 ```
 npm run deploy
