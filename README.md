@@ -98,7 +98,7 @@ You should see your changes live.
 
 # This is so tough, can I do it simpler?
 
-You can try [Replit Agent](https://docs.replit.com/replitai/agent), although this will cost you $25 (no free trial). UI-wise, it's mind-blowing. However, it's not guaranteed you'll be able to get your features implemented rapidly in it. It's 2024, LLMs can still be silly.
+You can try [Replit Agent](https://docs.replit.com/replitai/agent), although this will cost you $25 (no free trial). UX/vision-wise, it's mind-blowing. However, I can't get any meaningful results out of it so far. Worth trying, but it's 2024, so LLMs can still be silly.
 
 # Do I need a backend?
 
