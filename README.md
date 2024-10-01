@@ -10,6 +10,8 @@ This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor
 3. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
 4. Log into Github
 
+Optionally watch [my stream in Russian](https://www.youtube.com/watch?v=GlSaNy4bPLQ)
+
 
 ## Run locally
 Fork this repo:
