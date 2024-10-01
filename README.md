@@ -4,7 +4,7 @@ This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor
 
 ## Get the tools ready
 
-1. [Install Node.js](https://nodejs.org/en/download/prebuilt-installer)
+1. [Install Node.js](https://nodejs.org/en/download/prebuilt-installer) version 20
    - On Windows, do it directly to Windows, NOT to WSL-Ubuntu.
    - Don't try installing via your package manager, or you can get an outdated Node version like v12. You need at least v18 for Vite.
 3. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
