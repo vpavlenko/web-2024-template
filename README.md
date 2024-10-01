@@ -49,6 +49,8 @@ Hit Enter, then once it's done - hit Acccept All and reload your live demo in th
 
 Once you've changed anything, open <img width="170" alt="Screenshot 2024-09-29 at 11 55 25" src="https://github.com/user-attachments/assets/609846a8-9449-453c-b47b-57da07be9f8b"> in Cursor and try to commit and sync your changes to Github.
 
+If you're lost, open a Terminal, press Cmd+K (Ctrl+K) and describe what you want from Git in plain English.
+
 ## Deploy
 
 In the Cursor IDE, open a Terminal and run:
