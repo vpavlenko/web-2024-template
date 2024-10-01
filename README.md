@@ -8,7 +8,7 @@ This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor
    - On Windows, do it directly to Windows, NOT to WSL-Ubuntu.
    - Don't try installing via your package manager, or you can get an outdated Node version like v12. You need at least v18 for Vite.
 3. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
-4. Install git, make sure it works in your terminal
+4. Install Github Desktop (or make sure you have git on your machine)
 5. Log into Github
 6. Locally, [git config user.name and user.email](https://www.nobledesktop.com/learn/git/setup-email)
 
