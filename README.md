@@ -43,7 +43,7 @@ Populate with 5 boilerplate dishes.
 Make funky styling.
 ```
 
-You can write your mother tounge (Georgian, Ukrainian etc.) - it'll understand
+You can write your mother tounge (Georgian, Ukrainian etc.) - it'll [understand](https://chatgpt.com/share/66fbdfda-a314-800f-997d-1cedbc9f4f92)
 
 Hit Enter, then once it's done - hit Acccept All and reload your live demo in the browser.
 
