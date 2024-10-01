@@ -82,6 +82,7 @@ You should see your changes live.
 - Read [the docs](https://docs.cursor.com/)
 - https://github.com/PatrickJS/awesome-cursorrules
 - https://cursor.directory/
+- https://v0.dev/ and shadcn
 
 
 # This is so tough, can I do it simpler?
