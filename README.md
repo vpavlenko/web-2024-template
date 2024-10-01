@@ -77,6 +77,7 @@ You should see your changes live.
 - Once a Cursor made any small step in the right direction - commit
 - Press "+" to start a new Composer and erase unnecessary previous context. Cursor knows what you did before because it looks into the current code
 - If Cursor broke things: either Reject All, press "+" and start from the last commit; or try 2-3 attempts at sending error messages to it and ask to fix
+- Use `@Codebase` and also mention all files that might have a relevant context
 - Ask Cursor to add a debug output and paste it to composer
 - Ask Cursor to add a debug UI at the right place in your application. Ask to print out all relevant app state there
 - Read about [features](https://www.cursor.com/features)
