@@ -66,6 +66,8 @@ In the Cursor IDE, open a separate Terminal and run:
 npm run deploy
 ```
 
+If you get errors during deployment, pasted them to Cursor's Composer, and it'll try to fix. Then retry `npm run deploy` until it succeeds.
+
 Then enable the website link on Github: click "Use your GitHub Pages website":
 
 <img width="1086" alt="Screenshot 2024-09-30 at 22 14 15" src="https://github.com/user-attachments/assets/6fa99fc3-c359-4113-b328-7c5da738eb7c">
