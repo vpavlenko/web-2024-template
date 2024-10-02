@@ -30,17 +30,11 @@ Then git clone it locally:
 git clone git@github.com:YOUR-USERNAME/web-2024-template.git
 ```
 
-Then open this folder in Cursor, open package.json and run the `dev` script:
+Then open this folder in Cursor, open package.json, hover `dev` and click `Run Script`:
+<img width="616" alt="Screenshot 2024-10-02 at 11 49 15" src="https://github.com/user-attachments/assets/a75d0dd3-41a9-4730-a25b-b4accc867e09">
 
-
-(If it fails, do this in a Terminal:)
-```
-cd web-2024-template/
-npm install
-npm run dev
-```
-
-The open the link it gives (with localhost:5137) in your browser.
+Then open the link it gives (with localhost:5137) in your browser.
+<img width="1005" alt="Screenshot 2024-10-02 at 11 52 29" src="https://github.com/user-attachments/assets/9fbff3f8-be54-43af-80f3-fc8ed846cf2c">
 
 ## Make changes
 
