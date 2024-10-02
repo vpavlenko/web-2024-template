@@ -1,6 +1,8 @@
 # How to Cursor in React
 
-Our goal is to learn how to create web applications without learning programming/frameworks. Modern LLMs can write the code for you. They aren't ideal - treat them as rapid helpers that are smart but blind. Try to make them do what you want - give them precise instructions, iterate, step back and retry.
+Our goal is to learn how to create web applications without learning programming/frameworks.
+
+Modern LLMs can write the code for you. They aren't ideal - treat them as rapid helpers that are smart but blind. Try to make them do what you want - give them precise instructions, iterate, step back and retry.
 
 This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor IDE. Replace it with your logic and deploy to web - in minutes.
 
