@@ -43,6 +43,7 @@ Again, click `Accept All` when available and refresh your page in the browser:
 
 7. Try different ideas. You may retry from scratch with a completely different idea in mind.
 
+<img width="1120" alt="Screenshot 2024-10-02 at 13 31 56" src="https://github.com/user-attachments/assets/68c64181-2cae-47ba-b71f-e8a76fbd9772">
 
 
 ## Get the tools ready
