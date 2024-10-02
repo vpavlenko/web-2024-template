@@ -66,7 +66,7 @@ Then clone it locally using [GitHub Desktop](https://desktop.github.com/download
 Then open this folder in Cursor, open package.json, hover `dev` and click `Run Script`:
 <img width="616" alt="Screenshot 2024-10-02 at 11 49 15" src="https://github.com/user-attachments/assets/a75d0dd3-41a9-4730-a25b-b4accc867e09">
 
-Then open the link it gives (with localhost:5137) in your browser.
+Then open the link it gives in your browser.
 <img width="1005" alt="Screenshot 2024-10-02 at 11 52 29" src="https://github.com/user-attachments/assets/9fbff3f8-be54-43af-80f3-fc8ed846cf2c">
 
 ## Make changes
