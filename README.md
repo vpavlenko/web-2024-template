@@ -168,6 +168,8 @@ If you need a logic to process user's data on the backend - start with [Firebase
 
 # Troubleshooting
 
+If you encountered a tricky situation while running this guide, please send screenshots to [cxielamiko@gmail.com](mailto:cxielamiko@gmail.com) or [Vitaly Pavlenko on Telegram](https://t.me/vitalypavlenko) so I can add the fix for it to
+
 ### Git authenticity
 
 <img width="1229" alt="Screenshot 2024-10-02 at 15 52 36" src="https://github.com/user-attachments/assets/c528a173-05c1-402b-8c9d-24cc56179508">
