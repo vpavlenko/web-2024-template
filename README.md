@@ -1,6 +1,9 @@
 # How to Cursor in React
 
-This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor IDE, replace it with your logic and deploy to web - in minutes.
+Our goal is to learn how to create web applications without learning programming/frameworks. Modern LLMs can write the code for you. They aren't ideal - treat them as rapid helpers that are smart but blind.
+
+This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor IDE. Replace it with your logic and deploy to web - in minutes.
+
 
 ## Get the tools ready
 
@@ -95,6 +98,9 @@ You should see your changes live.
 - https://cursor.directory/
 - https://v0.dev/ and shadcn
 
+# Can I use vanilla HTML/JS/CSS?
+
+Yes! Cursor is just as good in generating plain code. If you don't think you need a React ecosystem, you can ask Cursor to generate an html website on an empty project, with no configuration and scripting. This may work for your case - try to find limits of this approach.
 
 # This is so tough, can I do it simpler?
 
