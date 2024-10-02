@@ -70,12 +70,8 @@ Fork this repo:
 
 <img width="1191" alt="Screenshot 2024-09-30 at 22 04 00" src="https://github.com/user-attachments/assets/9f31a473-30c9-4e3b-abc7-69edd4011459">
 
+Then clone it locally using GitHub Desktop:
 
-Then git clone it locally:
-
-```
-git clone git@github.com:YOUR-USERNAME/web-2024-template.git
-```
 
 Then open this folder in Cursor, open package.json, hover `dev` and click `Run Script`:
 <img width="616" alt="Screenshot 2024-10-02 at 11 49 15" src="https://github.com/user-attachments/assets/a75d0dd3-41a9-4730-a25b-b4accc867e09">
