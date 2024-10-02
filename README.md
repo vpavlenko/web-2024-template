@@ -30,8 +30,10 @@ Then git clone it locally:
 git clone git@github.com:YOUR-USERNAME/web-2024-template.git
 ```
 
-Then open this folder in Cursor and do smth like:
+Then open this folder in Cursor, open package.json and run the `dev` script:
 
+
+(If it fails, do this in a Terminal:)
 ```
 cd web-2024-template/
 npm install
