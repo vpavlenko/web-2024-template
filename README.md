@@ -51,7 +51,7 @@ Again, click `Accept All` when available and refresh your page in the browser:
 1. Go here -> [and install Node.js](https://nodejs.org/en/download/prebuilt-installer) version 20
    - On Windows, do it directly to Windows, NOT to WSL-Ubuntu.
    - Don't try installing via your package manager, or you can get an outdated Node version like v12. You need at least v18 for Vite.
-4. Install [git](https://git-scm.com/downloads)
+4. Type `git` to your terminal. If git is not found, install [git](https://git-scm.com/downloads)
 5. [Log into Github](https://github.com/login)
 6. If you never committed to git on this machine, run in the terminal with your own name and email:
 ```
