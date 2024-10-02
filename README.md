@@ -156,7 +156,7 @@ If you need a logic to process user's data on the backend - start with [Firebase
 
 1. Create an empty folder on your computer.
 2. File -> Open Folder it in Cursor.
-3. `Cmd+I` (`Ctrl+I`) `create a simple telegram bot`
+3. `Cmd+I` (`Ctrl+I`), type `create a simple telegram bot`
 
 
 # Backup
