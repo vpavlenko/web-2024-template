@@ -1,10 +1,10 @@
 # How to Cursor in React
 
-Our goal is to learn how to create web applications without learning programming/frameworks.
+In this guide you'll develop your own web application from scratch using plain English in the Cursor IDE. Cursor is the leading AI-powered code editor, capable of instantly making code changes in complex projects across multiple files.
 
-Modern LLMs can write the code for you. They aren't ideal - treat them as rapid helpers that are smart but blind. Try to make them do what you want - give them precise instructions, iterate, step back and retry.
+The development process is changing rapidly. Instead of learning programming languages and frameworks, you'll now need to carefully decompose projects into tasks, provide sufficient context to LLM helpers, and know how to recover from dead ends. Once you master this, you'll be able to start projects outside your area of expertise, even without any developers.
 
-This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor IDE. Replace it with your logic and deploy to web - in minutes.
+This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor IDE. Replace it with your logic and deploy to web.
 
 This guide will take around 1 to 2 hours of your time.
 
