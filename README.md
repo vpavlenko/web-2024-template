@@ -7,7 +7,9 @@ Modern LLMs can write the code for you. They aren't ideal - treat them as rapid 
 This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor IDE. Replace it with your logic and deploy to web - in minutes.
 
 
-## Before we do this freaking tooling: a simple html app 
+## A simple html app
+
+Before we dive into React, let's spend 10-20 minutes in a simpler setup.
 
 1. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
 3. Press `Cmd+I` (`Ctrl+I`) and ask Cursor to make a simple website. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
