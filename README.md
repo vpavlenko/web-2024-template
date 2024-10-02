@@ -158,7 +158,10 @@ If you need a logic to process user's data on the backend - start with [Firebase
 
 1. Create an empty folder on your computer.
 2. File -> Open Folder it in Cursor.
-3. `Cmd+I` (`Ctrl+I`), type `create a simple telegram bot`. Read carefully what it tells you to do. If something doesn't work, replace `pip` with `pip3` and `python` with `python3`
+3. `Cmd+I` (`Ctrl+I`), type `create a simple telegram bot`.
+   - Read carefully what it tells you to do
+   - If something doesn't work, replace `pip` with `pip3` and `python` with `python3`
+   - You need to kill (Ctrl+C) and rerun your `python3 bot.py` after every code change - since python scripts don't automatically reload after their code has been changed.
 
 
 # Backup
