@@ -138,6 +138,7 @@ You should see your changes live.
 You can try [Replit Agent](https://docs.replit.com/replitai/agent), although this will cost you $25 (no free trial). UX/vision-wise, it's mind-blowing. However, I can't get any meaningful results out of it so far. Worth trying, but it's 2024, so LLMs can still be silly.
 
 
+
 # Do I need a backend?
 
 Do you?
@@ -150,6 +151,12 @@ If you need authorization, ask Cursor to use [Firebase Authentication](https://f
 
 If you need a logic to process user's data on the backend - start with [Firebase Cloud Functions](https://firebase.google.com/)
 
+
+# How to create a Telegram bot?
+
+1. Create an empty folder on your computer.
+2. File -> Open Folder it in Cursor.
+3. `Cmd+I` (`Ctrl+I`) `create a simple telegram bot`
 
 
 # Backup
