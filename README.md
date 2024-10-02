@@ -164,6 +164,26 @@ If you need a logic to process user's data on the backend - start with [Firebase
    - You need to kill (Ctrl+C) and rerun your `python3 bot.py` after every code change - since python scripts don't automatically reload after their code has been changed.
 
 
+# Troubleshooting
+
+### Git authenticity
+
+<img width="1229" alt="Screenshot 2024-10-02 at 15 52 36" src="https://github.com/user-attachments/assets/c528a173-05c1-402b-8c9d-24cc56179508">
+
+Type `yes`, Enter.
+
+### Empty commit message
+
+<img width="1616" alt="Screenshot 2024-10-02 at 15 53 09" src="https://github.com/user-attachments/assets/b0797dc7-eba1-43ff-a23d-23fd3ddb65c4">
+
+Type `fix` in the file `COMMIT_EDITMSG` (on line 1), then Save the current file.
+
+Next time write a commit message right in the message box:
+
+<img width="252" alt="Screenshot 2024-10-02 at 15 54 23" src="https://github.com/user-attachments/assets/1fd00da2-1d3b-456f-b8f9-66d4d66982f8">
+
+
+
 # Backup
 
 4. Type `git` to your terminal. If git is not found, install [git](https://git-scm.com/downloads)
