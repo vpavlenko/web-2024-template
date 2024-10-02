@@ -145,10 +145,6 @@ You should see your changes live.
 
 You can try [Replit Agent](https://docs.replit.com/replitai/agent), although this will cost you $25 (no free trial). UX/vision-wise, it's mind-blowing. However, I can't get any meaningful results out of it so far. Worth trying, but it's 2024, so LLMs can still be silly.
 
-# Can I use vanilla HTML/JS/CSS?
-
-Yes! Cursor is just as good in generating plain code. If you don't think you need a React ecosystem, you can ask Cursor to generate an html website on an empty project, with no configuration and scripting. This may work for your case - try to find limits of this approach.
-
 
 # Do I need a backend?
 
