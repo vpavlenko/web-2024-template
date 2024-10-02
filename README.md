@@ -13,26 +13,35 @@ This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor
 2. Create a folder `test` and open it in Cursor:
 <img width="579" alt="Screenshot 2024-10-02 at 13 05 24" src="https://github.com/user-attachments/assets/2a99cdd9-bff0-415e-bd0e-fa2170b5fe4d">
 
-4. Press `Cmd+I` (`Ctrl+I`) and ask Cursor to make a simple website. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
+3. Press `Cmd+I` (`Ctrl+I`) and ask Cursor to make a simple website. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
 <img width="599" alt="Screenshot 2024-10-02 at 13 06 38" src="https://github.com/user-attachments/assets/6df0cba6-da1f-4ec2-8f01-d9d1434a0aab">
+
 ```
-create a simple html website with easy conversion between 7 main time zones. time in all of theme is displayed simultaneously, and I can change hh and mm in any of them in one click or by typing
+create a simple html website with easy conversion between 7 main time zones.
+time in all of theme is displayed simultaneously, and I can change hh and mm
+in any of them in one click or by typing
 ```
 
-5. Click `Accept All`:
+4. Click `Accept All`:
 <img width="874" alt="Screenshot 2024-10-02 at 13 07 19" src="https://github.com/user-attachments/assets/1db29fba-8814-4290-ad67-4830d9315301">
-6. Open this file `index.html` in your browser (File -> Open):
+
+5. Open this file `index.html` in your browser (File -> Open):
 <img width="588" alt="Screenshot 2024-10-02 at 13 10 37" src="https://github.com/user-attachments/assets/75d2b489-c4bd-4c70-9f60-8fb3b52d3e40">
-7. In the same Composer chat, ask for changes:
+
+6. In the same Composer chat, ask for changes:
+
 ```
-make a solid-looking modern UI, draw real clock faces for each, align them horizontally, also draw HH:MM numbers
+make a solid-looking modern UI, draw real clock faces for each,
+align them horizontally, also draw HH:MM numbers
 ```
 <img width="871" alt="Screenshot 2024-10-02 at 13 11 56" src="https://github.com/user-attachments/assets/5fee8527-c21e-4a1d-a35e-523665f6d2d5">
 
+
 Again, click `Accept All` when available and refresh your page in the browser:
+
 <img width="1123" alt="Screenshot 2024-10-02 at 13 13 45" src="https://github.com/user-attachments/assets/af5511e2-5bf8-45e6-ab14-72a6559e27f1">
 
-8. Try different ideas. You may retry from scratch with a completely different idea in mind.
+7. Try different ideas. You may retry from scratch with a completely different idea in mind.
 
 
 
