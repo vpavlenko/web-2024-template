@@ -105,13 +105,12 @@ If you're lost, open a Terminal, press Cmd+K (Ctrl+K) and describe what you want
 
 ## Deploy
 
-In the Cursor IDE, open a separate Terminal and run:
+Open `package.json` and run a deploy script:
 
-```
-npm run deploy
-```
+<img width="822" alt="Screenshot 2024-10-02 at 21 08 37" src="https://github.com/user-attachments/assets/facd4e44-17e5-4bb6-a762-310a6e6bd28c">
 
-If you get errors during deployment, pasted them to Cursor's Composer, and it'll try to fix. Then retry `npm run deploy` until it succeeds.
+
+If you get errors during deployment, copy them from terminal, paste them to Cursor's Composer, and it'll try to fix. Then retry deploying until it succeeds.
 
 Then enable the website link on Github: click "Use your GitHub Pages website":
 
