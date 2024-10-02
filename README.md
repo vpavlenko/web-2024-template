@@ -41,7 +41,7 @@ Again, click `Accept All` when available and refresh your page in the browser:
 
 <img width="1123" alt="Screenshot 2024-10-02 at 13 13 45" src="https://github.com/user-attachments/assets/af5511e2-5bf8-45e6-ab14-72a6559e27f1">
 
-7. Try different ideas. You may retry from scratch with a completely different idea in mind.
+7. Try different ideas. You may retry from scratch with a completely different idea in mind. How would you prompt to get that? Research prompt techniques online.
 
 <img width="1120" alt="Screenshot 2024-10-02 at 13 31 56" src="https://github.com/user-attachments/assets/68c64181-2cae-47ba-b71f-e8a76fbd9772">
 
