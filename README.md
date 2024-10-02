@@ -23,7 +23,7 @@ time in all of theme is displayed simultaneously, and I can change hh and mm
 in any of them in one click or by typing
 ```
 
-4. Click `Accept All`:
+4. Click `[Accept All]`:
 <img width="874" alt="Screenshot 2024-10-02 at 13 07 19" src="https://github.com/user-attachments/assets/1db29fba-8814-4290-ad67-4830d9315301">
 
 5. Open this file `index.html` in your browser (File -> Open):
@@ -38,7 +38,7 @@ align them horizontally, also draw HH:MM numbers
 <img width="871" alt="Screenshot 2024-10-02 at 13 11 56" src="https://github.com/user-attachments/assets/5fee8527-c21e-4a1d-a35e-523665f6d2d5">
 
 
-Again, click `Accept All` when available and refresh your page in the browser:
+Again, click `[Accept All]` when available and refresh your page in the browser:
 
 <img width="1123" alt="Screenshot 2024-10-02 at 13 13 45" src="https://github.com/user-attachments/assets/af5511e2-5bf8-45e6-ab14-72a6559e27f1">
 
@@ -93,7 +93,7 @@ See [troubleshooting](#troubleshooting) if anything fails.
 
 Once you've changed anything, open <img width="263" alt="Screenshot 2024-10-02 at 15 09 57" src="https://github.com/user-attachments/assets/8672006e-9198-4399-9169-0086bf01e961"> in Cursor, write a commit message in the Message field (a short summary of your changes).
 
-If you wrote a message, press Commit, then press Sync.
+If you wrote a message, press `[Commit]`, then press `[Sync]`.
 
 The UI here is annoying and humiliating, I know. 
 
