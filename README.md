@@ -7,7 +7,7 @@ Modern LLMs can write the code for you. They aren't ideal - treat them as rapid 
 This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor IDE. Replace it with your logic and deploy to web - in minutes.
 
 
-## Before we do this freaking tooling 
+## Before we do this freaking tooling: a simple html app 
 
 1. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
 2. Create a folder `test` and open it in Cursor:
@@ -48,12 +48,12 @@ Again, click `Accept All` when available and refresh your page in the browser:
 8. This was a simple single-file application. The true power of Cursor comes in instantly making changes throughout many files in a big project. This allows you to build complex features. For that, we need to use a React library and some tooling - which is what this template's files provide.
 
 
+
 ## Get the tools ready
 
 1. Go here -> [and install Node.js](https://nodejs.org/en/download/prebuilt-installer) version 20
    - On Windows, do it directly to Windows, NOT to WSL-Ubuntu.
    - Don't try installing via your package manager, or you can get an outdated Node version like v12. You need at least v18 for Vite.
-3. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
 4. Install [git](https://git-scm.com/downloads)
 5. [Log into Github](https://github.com/login)
 6. If you never committed to git on this machine, run in the terminal with your own name and email:
