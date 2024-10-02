@@ -87,6 +87,8 @@ Hit Enter, then once it's done - hit Acccept All and reload your live demo in th
 
 ## Save changes (commit)
 
+See [troubleshooting](#troubleshooting) if anything fails.
+
 Once you've changed anything, open <img width="263" alt="Screenshot 2024-10-02 at 15 09 57" src="https://github.com/user-attachments/assets/8672006e-9198-4399-9169-0086bf01e961"> in Cursor, write a commit message in the Message field (a short summary of your changes).
 
 If you wrote a message, press Commit, then press Sync.
