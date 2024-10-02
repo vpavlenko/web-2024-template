@@ -6,6 +6,8 @@ Modern LLMs can write the code for you. They aren't ideal - treat them as rapid 
 
 This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor IDE. Replace it with your logic and deploy to web - in minutes.
 
+This guide will take around 1 to 2 hours of your time.
+
 
 ## A simple html app
 
