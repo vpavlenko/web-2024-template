@@ -13,7 +13,7 @@ This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor
 2. Create a folder `test` and open it in Cursor:
 <img width="579" alt="Screenshot 2024-10-02 at 13 05 24" src="https://github.com/user-attachments/assets/2a99cdd9-bff0-415e-bd0e-fa2170b5fe4d">
 
-4. Press Cmd+I (Ctrl+I) and ask Cursor to make a simple website. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
+4. Press `Cmd+I` (`Ctrl+I`) and ask Cursor to make a simple website. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
 <img width="599" alt="Screenshot 2024-10-02 at 13 06 38" src="https://github.com/user-attachments/assets/6df0cba6-da1f-4ec2-8f01-d9d1434a0aab">
 ```
 create a simple html website with easy conversion between 7 main time zones. time in all of theme is displayed simultaneously, and I can change hh and mm in any of them in one click or by typing
