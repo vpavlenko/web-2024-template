@@ -85,7 +85,11 @@ Hit Enter, then once it's done - hit Acccept All and reload your live demo in th
 
 ## Save changes (commit)
 
-Once you've changed anything, open <img width="170" alt="Screenshot 2024-09-29 at 11 55 25" src="https://github.com/user-attachments/assets/609846a8-9449-453c-b47b-57da07be9f8b"> in Cursor and try to commit and sync your changes to Github.
+Once you've changed anything, open <img width="263" alt="Screenshot 2024-10-02 at 15 09 57" src="https://github.com/user-attachments/assets/8672006e-9198-4399-9169-0086bf01e961"> in Cursor, write a commit message (a short summary of your changes) and make Commit, then Sync.
+
+The UI here is annoying and humiliating, I know. 
+
+You may also do it from GitHub Desktop. 
 
 If you're lost, open a Terminal, press Cmd+K (Ctrl+K) and describe what you want from Git in plain English.
 
