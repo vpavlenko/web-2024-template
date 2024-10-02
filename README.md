@@ -8,6 +8,21 @@ This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor
 
 This guide will take around 1 to 2 hours of your time.
 
+- [How to Cursor in React](#how-to-cursor-in-react)
+  * [A simple html app](#a-simple-html-app)
+  * [Get the tools ready](#get-the-tools-ready)
+  * [Run locally](#run-locally)
+  * [Make changes](#make-changes)
+  * [Save changes (commit)](#save-changes--commit-)
+  * [Deploy](#deploy)
+  * [Tips](#tips)
+- [This is so tough, can I do it simpler?](#this-is-so-tough--can-i-do-it-simpler-)
+- [Do I need a backend?](#do-i-need-a-backend-)
+- [How to create a Telegram bot?](#how-to-create-a-telegram-bot-)
+- [Troubleshooting](#troubleshooting)
+    + [Git authenticity](#git-authenticity)
+    + [Empty commit message](#empty-commit-message)
+- [Backup](#backup)
 
 ## A simple html app
 
