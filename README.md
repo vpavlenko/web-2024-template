@@ -45,6 +45,8 @@ Again, click `Accept All` when available and refresh your page in the browser:
 
 <img width="1120" alt="Screenshot 2024-10-02 at 13 31 56" src="https://github.com/user-attachments/assets/68c64181-2cae-47ba-b71f-e8a76fbd9772">
 
+8. This was a simple single-file application. The true power of Cursor comes in instantly making changes throughout many files in a big project. This allows you to build complex features. For that, we need to use a React library and some tooling - which is what this template's files provide.
+
 
 ## Get the tools ready
 
