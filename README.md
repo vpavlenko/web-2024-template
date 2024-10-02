@@ -132,6 +132,7 @@ You should see your changes live.
 - Use `@Codebase` and also mention all files that might have a relevant context
 - Ask Cursor to add a debug output and paste it to composer
 - Ask Cursor to add a debug UI at the right place in your application. Ask to print out all relevant app state there
+- Try building anything with OpenAI API
 - Read about [features](https://www.cursor.com/features)
 - Read [the docs](https://docs.cursor.com/)
 - https://cursorcasts.com/
