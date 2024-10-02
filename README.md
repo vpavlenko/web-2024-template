@@ -5,15 +5,37 @@ Our goal is to learn how to create web applications without learning programming
 This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor IDE. Replace it with your logic and deploy to web - in minutes.
 
 
+## Before we do this freaking tooling 
+
+1. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
+2. Open Cursor, create a file "calendar.html"
+3. Press Cmd+I (Ctrl+I) and 
+4. Try to create a simple HTML webpage (you can prompt in your language - Spanish, Polish etc.):
+<img width="568" alt="Screenshot 2024-10-02 at 12 05 58" src="https://github.com/user-attachments/assets/a385e8c9-25f0-4396-b67a-f3165a3d49ca">
+5. Hit "Accept All":
+
+7. Open `calendar.html` it in your browser.
+8. 
+9. Once you tried "Accept All" three times, go further.
+
+
+
 ## Get the tools ready
 
 1. Go here -> [and install Node.js](https://nodejs.org/en/download/prebuilt-installer) version 20
    - On Windows, do it directly to Windows, NOT to WSL-Ubuntu.
    - Don't try installing via your package manager, or you can get an outdated Node version like v12. You need at least v18 for Vite.
 3. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
-4. Install Github Desktop (or make sure you have git on your machine)
-5. Log into Github
-6. Locally, [git config user.name and user.email](https://www.nobledesktop.com/learn/git/setup-email)
+4. Install [git](https://git-scm.com/downloads)
+5. [Log into Github](https://github.com/login)
+6. If you never committed to git on this machine, run in the terminal with your own name and email:
+```
+git config --global user.name "Your Name"
+```
+and
+```
+git config --global user.email "youremail@example.com"
+```
 
 Optionally watch [my stream in Russian](https://www.youtube.com/watch?v=GlSaNy4bPLQ)
 
