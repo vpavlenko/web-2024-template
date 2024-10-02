@@ -51,16 +51,7 @@ Again, click `Accept All` when available and refresh your page in the browser:
 1. Go here -> [and install Node.js](https://nodejs.org/en/download/prebuilt-installer) version 20
    - On Windows, do it directly to Windows, NOT to WSL-Ubuntu.
    - Don't try installing via your package manager, or you can get an outdated Node version like v12. You need at least v18 for Vite.
-4. Type `git` to your terminal. If git is not found, install [git](https://git-scm.com/downloads)
 5. [Log into Github](https://github.com/login)
-6. If you never committed to git on this machine, run in the terminal with your own name and email:
-```
-git config --global user.name "Your Name"
-```
-and
-```
-git config --global user.email "youremail@example.com"
-```
 
 Optionally watch [my stream in Russian](https://www.youtube.com/watch?v=GlSaNy4bPLQ)
 
@@ -70,8 +61,7 @@ Fork this repo:
 
 <img width="1191" alt="Screenshot 2024-09-30 at 22 04 00" src="https://github.com/user-attachments/assets/9f31a473-30c9-4e3b-abc7-69edd4011459">
 
-Then clone it locally using GitHub Desktop:
-
+Then clone it locally using [GitHub Desktop](https://desktop.github.com/download/)
 
 Then open this folder in Cursor, open package.json, hover `dev` and click `Run Script`:
 <img width="616" alt="Screenshot 2024-10-02 at 11 49 15" src="https://github.com/user-attachments/assets/a75d0dd3-41a9-4730-a25b-b4accc867e09">
@@ -153,3 +143,18 @@ If you need to persist it across users or devices, ask Cursor to use [Firestore]
 If you need authorization, ask Cursor to use [Firebase Authentication](https://firebase.google.com/)
 
 If you need a logic to process user's data on the backend - start with [Firebase Cloud Functions](https://firebase.google.com/)
+
+
+
+# Backup
+
+4. Type `git` to your terminal. If git is not found, install [git](https://git-scm.com/downloads)
+6. If you never committed to git on this machine, run in the terminal with your own name and email:
+```
+git config --global user.name "Your Name"
+```
+and
+```
+git config --global user.email "youremail@example.com"
+```
+
