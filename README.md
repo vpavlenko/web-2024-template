@@ -57,7 +57,7 @@ Again, click `[Accept All]` when available and refresh your page in the browser:
    - Don't try installing via your package manager, or you can get an outdated Node version like v12. You need at least v18 for Vite.
 5. [Log into Github](https://github.com/login)
 
-Optionally watch [my stream in Russian](https://www.youtube.com/watch?v=GlSaNy4bPLQ)
+Optionally watch [my stream in Russian](https://www.youtube.com/live/NVnHvsuc5Fc)
 
 
 ## Run locally
