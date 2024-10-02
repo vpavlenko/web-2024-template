@@ -56,8 +56,6 @@ Once you've changed anything, open <img width="170" alt="Screenshot 2024-09-29 a
 
 If you're lost, open a Terminal, press Cmd+K (Ctrl+K) and describe what you want from Git in plain English.
 
-You may try to commit using `@commit` command from Composer.
-
 ## Deploy
 
 In the Cursor IDE, open a separate Terminal and run:
