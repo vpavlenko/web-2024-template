@@ -118,7 +118,8 @@ Then enable the website link on Github: click "Use your GitHub Pages website":
 
 <img width="1137" alt="Screenshot 2024-09-30 at 22 15 58" src="https://github.com/user-attachments/assets/1dd5b7d8-4478-4693-bf84-0a466ebbfbda">
 
-<img width="1047" alt="Screenshot 2024-09-30 at 23 40 09" src="https://github.com/user-attachments/assets/178195be-f8fb-40fd-931f-d4b22c923766">
+<img width="1437" alt="Снимок экрана 2024-10-02 в 15 15 25" src="https://github.com/user-attachments/assets/047dca0c-b01f-4b52-bd8f-db6598b27feb">
+
 
 You should see your changes live.
 
