@@ -15,6 +15,7 @@ This guide will take around 1 to 2 hours of your time.
   * [Make changes](#make-changes)
   * [Save changes (commit)](#save-changes-commit)
   * [Deploy](#deploy)
+  * [Bring your idea](#bring-your-idea)
   * [Tips](#tips)
   * [React vs Vanilla JS](#react-vs-vanilla-js)
 - [This is so tough, can I do it simpler?](#this-is-so-tough-can-i-do-it-simpler)
@@ -142,6 +143,10 @@ Then enable the website link on Github: uncheck and check back the ✅ `Use your
 
 
 You should see your changes live.
+
+## Bring your idea
+
+Now you can change this template into any front-end idea that you'd like to create. Depending on your feature set, you may or may not need a back-end - see below for suggestions.
 
 ## Tips
 
