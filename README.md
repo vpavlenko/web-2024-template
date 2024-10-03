@@ -29,7 +29,7 @@ This guide will take around 1 to 2 hours of your time.
 Before we dive into React, let's spend 10-20 minutes in a simpler setup.
 
 1. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
-3. Press `Cmd+I` (`Ctrl+I`) and ask Cursor to make a simple website. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
+3. As you're in a `.cursortutor` project, press `Cmd+I` (`Ctrl+I`) and ask Cursor to make a simple website. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
 <img width="599" alt="Screenshot 2024-10-02 at 13 06 38" src="https://github.com/user-attachments/assets/6df0cba6-da1f-4ec2-8f01-d9d1434a0aab">
 
 ```
