@@ -127,7 +127,7 @@ Open `package.json` and run a deploy script:
 
 If you get errors during deployment, copy them from terminal, paste them to Cursor's Composer, and it'll try to fix. Then retry deploying until it succeeds.
 
-Then enable the website link on Github: check ✅ `Use your GitHub Pages website`:
+Then enable the website link on Github: uncheck and check back the ✅ `Use your GitHub Pages website`:
 
 <img width="1086" alt="Screenshot 2024-09-30 at 22 14 15" src="https://github.com/user-attachments/assets/6fa99fc3-c359-4113-b328-7c5da738eb7c">
 
