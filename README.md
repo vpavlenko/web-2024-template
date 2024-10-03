@@ -164,8 +164,7 @@ Now you can change this template into any front-end idea that you'd like to crea
 - Read about [features](https://www.cursor.com/features)
 - Read [the docs](https://docs.cursor.com/)
 - https://cursorcasts.com/
-- https://github.com/PatrickJS/awesome-cursorrules
-- https://cursor.directory/
+- https://github.com/PatrickJS/awesome-cursorrules and https://cursor.directory/
 - https://v0.dev/ and [shadcn/ui](https://ui.shadcn.com/)
 
 
