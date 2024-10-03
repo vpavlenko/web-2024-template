@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { TextField, Button, Box } from '@mui/material';
-import { saveTodoToFirestore } from '../firebaseUtils';
+import { saveTodoToFirestore, Todo } from '../firebaseUtils';
 
 interface TodoFormProps {
-  onAddTodo: (todo: { title: string; description: string; completed: boolean }) => void;
+  onAddTodo: (todo: Omit<Todo, 'id' | 'createdAt'>) => void;
 }
 
 const TodoForm: React.FC<TodoFormProps> = ({ onAddTodo }) => {
