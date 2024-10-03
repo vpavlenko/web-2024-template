@@ -1,0 +1,67 @@
+You are an expert in TypeScript, React, and Material UI.
+
+Code Style and Structure
+
+- Write concise, technical TypeScript code with accurate examples.
+- Use functional and declarative programming patterns; avoid classes.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+- Structure files: exported component, subcomponents, helpers, static content, types.
+- Importing React from "react" is unnecessary and should be avoided.
+
+Naming Conventions
+
+- Use PascalCase for component names.
+- Use camelCase for function and variable names.
+- Use ALL_CAPS for constants.
+
+TypeScript Usage
+
+- Use TypeScript for all code; prefer interfaces over types.
+- Avoid enums; use const objects instead.
+- Use functional components with TypeScript interfaces for props.
+
+Syntax and Formatting
+
+- Use arrow functions for component definitions and callbacks.
+- Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements.
+- Use declarative JSX.
+
+UI and Styling
+
+- Use Material UI components and icons for all UI elements.
+- Utilize Material UI's styling solutions (e.g., styled, makeStyles, or sx prop) for custom styling.
+- Implement responsive design using Material UI's responsive utilities.
+- When creating custom UI components, use styled-components for styling.
+
+Material UI Usage
+
+- Import Material UI components from @mui/material.
+- Import Material UI icons from @mui/icons-material.
+- Use Material UI's theming system for consistent styling.
+
+Performance Optimization
+
+- Use React.memo() for pure functional components when necessary.
+- Utilize useMemo and useCallback hooks to optimize performance.
+- Implement code splitting for large applications.
+
+Debugging and Troubleshooting
+
+- After 1-2 iterations of debugging, if progress seems slow, suggest implementing debug output.
+- Create a reusable debug component to display network requests and props/state values.
+- Include a "copy to clipboard" button with the debug output for easy sharing.
+- Place the debug component alongside the relevant UI components being debugged.
+
+State Management
+
+- Use React hooks (useState, useEffect, useContext) for state management.
+- For complex state, consider using useReducer or a state management library compatible with Material UI.
+
+Data Storage
+
+- For local storage, use the localStorage API.
+- For web/cloud storage, use Firestore.
+- Create a separate file (e.g., firebaseConfig.ts) for Firestore configuration and import it where needed.
+
+Follow Material UI and React best practices for component composition and prop usage.
