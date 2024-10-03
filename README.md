@@ -162,7 +162,9 @@ You should see your changes live.
 
 # This is so tough, can I do it simpler?
 
-You can try [Replit Agent](https://docs.replit.com/replitai/agent), although this will cost you $25 (no free trial). UX/vision-wise, it's mind-blowing. However, I can't get any meaningful results out of it so far. Worth trying, but it's 2024, so LLMs can still be silly.
+You can try [Replit Agent](https://docs.replit.com/replitai/agent), although this will cost you $25 (no free trial). UX/vision-wise, it's mind-blowing. However, I can't get any meaningful results out of it so far. Also, it's heavily leaning towards Flask.
+
+Worth trying, but it's 2024, so LLMs can still be silly.
 
 
 
@@ -178,6 +180,23 @@ If you need authorization, ask Cursor to use [Firebase Authentication](https://f
 
 If you need a logic to process user's data on the backend - start with [Firebase Cloud Functions](https://firebase.google.com/)
 
+## Adding Firestore to the project
+
+0. Ask Cursor:
+```
+save data to Firestore. create a separate file for Firebase keys
+```
+2. Log into https://console.firebase.google.com/
+3. Create a project.
+4. Select "Cloud Firestore", create a database in **test mode**:
+
+<img width="895" alt="Screenshot 2024-10-03 at 15 41 39" src="https://github.com/user-attachments/assets/c69af68e-622b-4276-a612-0d2c914c92d1">
+
+6. In `⚙️ Project Settings` create a web app **</>**:
+
+<img width="1089" alt="Screenshot 2024-10-03 at 15 43 31" src="https://github.com/user-attachments/assets/5973592c-af22-44d6-8ad3-2e22f36e26d4">
+
+8. 
 
 # How to create a Telegram bot?
 
