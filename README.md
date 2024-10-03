@@ -199,7 +199,7 @@ Save data to Firestore
 
 <img width="1089" alt="Screenshot 2024-10-03 at 15 43 31" src="https://github.com/user-attachments/assets/5973592c-af22-44d6-8ad3-2e22f36e26d4">
 
-8. Copy firebaseConfig to the file that Cursor created for it:
+8. Copy `firebaseConfig` to the file that Cursor created for it:
 
 ```js
 const firebaseConfig = {
@@ -217,7 +217,6 @@ const firebaseConfig = {
 9. Open your database and try to see it there:
 
 <img width="850" alt="Screenshot 2024-10-03 at 16 17 23" src="https://github.com/user-attachments/assets/bb790a30-9ea0-4cfb-b4e7-ca068173e30b">
-
 
 10. If something breaks, ask Cursor to add a debug output for all Firebase requests.
 
