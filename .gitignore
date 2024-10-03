@@ -25,3 +25,6 @@ dist-ssr
 
 # TypeScript build info files
 *.tsbuildinfo
+
+# Do not ignore .gitconfig
+!.gitconfig
