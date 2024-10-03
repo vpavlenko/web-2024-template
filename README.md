@@ -184,7 +184,7 @@ If you need a logic to process user's data on the backend - start with [Firebase
 
 0. Ask Cursor:
 ```
-save data to Firestore. create a separate file for Firebase keys
+save data to Firestore. create a separate file for firebaseConfig
 ```
 2. Log into https://console.firebase.google.com/
 3. Create a project.
@@ -192,11 +192,29 @@ save data to Firestore. create a separate file for Firebase keys
 
 <img width="895" alt="Screenshot 2024-10-03 at 15 41 39" src="https://github.com/user-attachments/assets/c69af68e-622b-4276-a612-0d2c914c92d1">
 
-6. In `⚙️ Project Settings` create a web app **</>**:
+6. In `⚙️ Project Settings` create a web app **</>** (no **Firebase Hosting** needed):
 
 <img width="1089" alt="Screenshot 2024-10-03 at 15 43 31" src="https://github.com/user-attachments/assets/5973592c-af22-44d6-8ad3-2e22f36e26d4">
 
-8. 
+8. Copy firebaseConfig to the file that Cursor created for it:
+
+```js
+const firebaseConfig = {
+  apiKey: "AIzaNdPrtYYZO3Mo9gmNTQFwqI8fSdn-jKTuWA",
+  authDomain: "your-app-43gh9.firebaseapp.com",
+  projectId: "your-app-43gh9",
+  storageBucket: "your-app-43gh9.appspot.com",
+  messagingSenderId: "783999999999",
+  appId: "1:783553619737:web:dff6fce9589deaf34",
+  measurementId: "G-JL7GNDPV6V"
+};
+```
+
+9. Reload your app, make sure it has saved the data to the database.
+9. Open your database and try to see it there:
+
+
+10. If something breaks, ask Cursor to add a debug output for all Firebase requests.
 
 # How to create a Telegram bot?
 
