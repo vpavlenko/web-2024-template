@@ -193,8 +193,6 @@ Worth trying, but it's 2024, so LLMs can still be silly.
 
 # Do I need a backend?
 
-Do you?
-
 If you simply want to persist data, ask Cursor to save data in local storage. 
 
 If you need to persist it across users or devices, ask Cursor to use [Firestore](https://firebase.google.com/)
