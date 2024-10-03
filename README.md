@@ -16,6 +16,7 @@ This guide will take around 1 to 2 hours of your time.
   * [Save changes (commit)](#save-changes--commit-)
   * [Deploy](#deploy)
   * [Tips](#tips)
+  * [React vs Vanilla JS](#react-vs-vanilla-js)
 - [This is so tough, can I do it simpler?](#this-is-so-tough--can-i-do-it-simpler-)
 - [Do I need a backend?](#do-i-need-a-backend-)
   * [Adding Firestore to the project](#adding-firestore-to-the-project)
