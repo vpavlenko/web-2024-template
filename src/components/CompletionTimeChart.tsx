@@ -18,6 +18,10 @@ const CompletionTimeChart: React.FC<CompletionTimeChartProps> = ({ todos }) => {
     const completedTodos = todos.filter(todo => todo.completedAt && todo.completedAt >= startDate.getTime());
 
     const dateCounts: { [date: string]: number } = {};
+    for (let d = new Date(startDate); d <= now; d.setDate(d.getDate() + 1)) {
+      dateCounts[d.toISOString().split('T')[0]] = 0;
+    }
+
     completedTodos.forEach(todo => {
       const date = new Date(todo.completedAt!).toISOString().split('T')[0];
       dateCounts[date] = (dateCounts[date] || 0) + 1;
@@ -73,7 +77,7 @@ const CompletionTimeChart: React.FC<CompletionTimeChartProps> = ({ todos }) => {
             dataKey="date"
             label={{ value: 'Date', position: 'insideBottom', offset: -10 }}
             tick={{ fontSize: 12 }}
-            interval="preserveStartEnd"
+            interval={Math.floor(chartData.length / 7)}
           />
           <YAxis
             label={{ value: 'Completed Todos', angle: -90, position: 'insideLeft' }}
