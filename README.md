@@ -163,6 +163,17 @@ You should see your changes live.
 - https://v0.dev/ and [shadcn/ui](https://ui.shadcn.com/)
 
 
+## React vs Vanilla JS
+
+Why do we need a framework like React if the generation works nice even in a plain HTML?
+
+My instinctive answer would be "because it scales better": as you grow your app, add more features, libraries, complexity, pages, sections, state - React manages it better. But that's a dev's answer - because React helps you manage the complexity of reasoning about your code and debugging it.
+
+LLMs take the long generation for granted. However, that doesn't mean it's always error-prone. A result depends so much from precise wording, a thoroughly explained mental model of your app and your features, a lot of debug output added at a right time etc. 
+
+So I'd still bet on that with React+TypeScript you'll be able to integrate whatever you need - modern UI kits, payment processing, maps, animations, nav, charts, drag&drop, optimistic updates, dynamic loading - easier and faster.
+
+
 # This is so tough, can I do it simpler?
 
 You can try [Replit Agent](https://docs.replit.com/replitai/agent), although this will cost you $25 (no free trial). UX/vision-wise, it's mind-blowing. However, I can't get any meaningful results out of it so far. Also, it's heavily leaning towards Flask.
