@@ -157,7 +157,7 @@ You should see your changes live.
 - https://cursorcasts.com/
 - https://github.com/PatrickJS/awesome-cursorrules
 - https://cursor.directory/
-- https://v0.dev/ and shadcn
+- https://v0.dev/ and [shadcn/ui](https://ui.shadcn.com/)
 
 
 # This is so tough, can I do it simpler?
