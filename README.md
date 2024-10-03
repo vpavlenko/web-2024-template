@@ -30,15 +30,16 @@ Before we dive into React, let's spend 10-20 minutes in a simpler setup.
 
 1. Install [Cursor IDE](https://www.cursor.com/). If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
 3. As you're in a `.cursortutor` project, press `Cmd+I` (`Ctrl+I`) and ask Cursor to make a simple website. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
-<img width="599" alt="Screenshot 2024-10-02 at 13 06 38" src="https://github.com/user-attachments/assets/6df0cba6-da1f-4ec2-8f01-d9d1434a0aab">
-
 ```
 create a simple html website with easy conversion between 7 main time zones.
 time in all of theme is displayed simultaneously, and I can change hh and mm
 in any of them in one click or by typing
 ```
+<img width="599" alt="Screenshot 2024-10-02 at 13 06 38" src="https://github.com/user-attachments/assets/6df0cba6-da1f-4ec2-8f01-d9d1434a0aab">
 
-4. Click `[Accept All]`:
+
+
+4. Click `[Accept All]`. Trust Cursor, don't read the code that it generated – it's not relevant for this task:
 <img width="874" alt="Screenshot 2024-10-02 at 13 07 19" src="https://github.com/user-attachments/assets/1db29fba-8814-4290-ad67-4830d9315301">
 
 5. Open this file `index.html` in your browser (File -> Open):
