@@ -185,9 +185,9 @@ If you need a logic to process user's data on the backend - start with [Firebase
 
 ## Adding Firestore to the project
 
-0. Ask Cursor:
+1. Ask Cursor:
 ```
-save data to Firestore. create a separate file for firebaseConfig
+Save data to Firestore
 ```
 2. Log into https://console.firebase.google.com/
 3. Create a project.
