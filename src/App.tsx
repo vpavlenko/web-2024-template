@@ -99,6 +99,26 @@ const App: React.FC = () => {
     }
   };
 
+  const handleUnarchive = async (id: string) => {
+    try {
+      const todoToUnarchive = todos.find(todo => todo.id === id);
+      if (todoToUnarchive) {
+        const updatedTodo = { 
+          ...todoToUnarchive, 
+          archived: false,
+          archivedAt: null
+        };
+        await updateTodoInFirestore(id, { 
+          archived: updatedTodo.archived, 
+          archivedAt: updatedTodo.archivedAt 
+        });
+        setTodos(todos.map(todo => todo.id === id ? updatedTodo : todo));
+      }
+    } catch (error) {
+      console.error("Error unarchiving todo:", error);
+    }
+  };
+
   const activeTodos = todos.filter(todo => !todo.completed && !todo.archived);
   const completedTodos = todos.filter(todo => todo.completed && !todo.archived);
   const archivedTodos = todos.filter(todo => todo.archived);
@@ -133,6 +153,7 @@ const App: React.FC = () => {
                   todo={todo}
                   onToggle={() => handleToggle(todo.id)}
                   onArchive={() => handleArchive(todo.id)}
+                  onUnarchive={() => handleUnarchive(todo.id)}
                 />
               ))}
             </List>
@@ -154,6 +175,7 @@ const App: React.FC = () => {
                         todo={todo}
                         onToggle={() => handleToggle(todo.id)}
                         onArchive={() => handleArchive(todo.id)}
+                        onUnarchive={() => handleUnarchive(todo.id)}
                       />
                     ))}
                   </List>
@@ -178,6 +200,7 @@ const App: React.FC = () => {
                         todo={todo}
                         onToggle={() => handleToggle(todo.id)}
                         onArchive={() => {}} // Archived todos can't be archived again
+                        onUnarchive={() => handleUnarchive(todo.id)}
                       />
                     ))}
                   </List>

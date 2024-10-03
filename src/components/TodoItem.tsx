@@ -1,6 +1,7 @@
 import React from 'react';
 import { ListItem, ListItemText, Checkbox, IconButton, Box, Typography } from '@mui/material';
 import ArchiveIcon from '@mui/icons-material/Archive';
+import UnarchiveIcon from '@mui/icons-material/Unarchive';
 import { formatDistanceToNow } from 'date-fns';
 import { Todo } from '../firebaseUtils';
 
@@ -8,9 +9,10 @@ interface TodoItemProps {
   todo: Todo;
   onToggle: () => void;
   onArchive: () => void;
+  onUnarchive: () => void;
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive }) => {
+const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive, onUnarchive }) => {
   const formatRelativeDate = (timestamp: number | null) => {
     if (!timestamp || isNaN(timestamp)) {
       return 'Unknown date';
@@ -32,7 +34,11 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive }) => {
           <Typography variant="caption" color="text.secondary" sx={{ mr: 1 }}>
             {formatRelativeDate(todo.completed ? todo.completedAt : todo.createdAt)}
           </Typography>
-          {!todo.archived && (
+          {todo.archived ? (
+            <IconButton edge="end" aria-label="unarchive" onClick={onUnarchive} size="small">
+              <UnarchiveIcon />
+            </IconButton>
+          ) : (
             <IconButton edge="end" aria-label="archive" onClick={onArchive} size="small">
               <ArchiveIcon />
             </IconButton>
