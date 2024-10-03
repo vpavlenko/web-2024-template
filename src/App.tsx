@@ -4,51 +4,45 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import TodoForm from './components/TodoForm';
 import TodoItem from './components/TodoItem';
-import { collection, getDocs, updateDoc, doc } from 'firebase/firestore';
-import { db } from './firebaseConfig';
-import { Todo, updateTodoInFirestore } from './firebaseUtils';
+import { Todo, updateTodoInFirestore, fetchTodosForCurrentUser, saveTodoToFirestore } from './firebaseUtils';
 import CompletionTimeChart from './components/CompletionTimeChart';
-
-const fetchTodos = async () => {
-  const todosCollection = collection(db, 'todos');
-  const todosSnapshot = await getDocs(todosCollection);
-  return todosSnapshot.docs.map(doc => {
-    const data = doc.data();
-    let completedAt = null;
-    let createdAt = data.createdAt;
-
-    if (data.completedAt) {
-      if (typeof data.completedAt === 'object' && 'toDate' in data.completedAt) {
-        completedAt = data.completedAt.toDate().getTime();
-      } else if (typeof data.completedAt === 'number') {
-        completedAt = data.completedAt;
-      } else if (typeof data.completedAt === 'string') {
-        completedAt = new Date(data.completedAt).getTime();
-      }
-    }
-
-    if (typeof createdAt === 'object' && 'toDate' in createdAt) {
-      createdAt = createdAt.toDate().getTime();
-    } else if (typeof createdAt === 'string') {
-      createdAt = new Date(createdAt).getTime();
-    }
-
-    return {
-      ...data,
-      id: doc.id,
-      completedAt,
-      createdAt: createdAt || Date.now() // Fallback to current time if createdAt is invalid
-    };
-  });
-};
+import { auth } from './firebaseConfig';
+import { signInWithPopup, GoogleAuthProvider, User } from 'firebase/auth';
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [showCompleted, setShowCompleted] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    fetchTodos().then(setTodos).catch(console.error);
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+      if (user) {
+        fetchTodosForCurrentUser().then(setTodos).catch(console.error);
+      } else {
+        setTodos([]);
+      }
+    });
+
+    return () => unsubscribe();
   }, []);
+
+  const handleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+    } catch (error) {
+      console.error('Error signing in:', error);
+    }
+  };
+
+  const handleSignOut = async () => {
+    try {
+      await auth.signOut();
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  };
 
   const handleToggle = async (id: string) => {
     try {
@@ -57,7 +51,7 @@ const App: React.FC = () => {
         const updatedTodo = { 
           ...todoToToggle, 
           completed: !todoToToggle.completed,
-          completedAt: !todoToToggle.completed ? Date.now() : null // Change this line
+          completedAt: !todoToToggle.completed ? Date.now() : null
         };
         await updateTodoInFirestore(id, { 
           completed: updatedTodo.completed, 
@@ -67,26 +61,39 @@ const App: React.FC = () => {
       }
     } catch (error) {
       console.error("Error toggling todo:", error);
-      // Optionally, show an error message to the user
     }
   };
 
-  const addTodo = async (newTodo: Omit<Todo, 'id' | 'createdAt' | 'completedAt'>) => {
-    const createdAt = Date.now();
-    const todoToAdd = { ...newTodo, id: createdAt.toString(), createdAt, completedAt: null };
-    setTodos([...todos, todoToAdd]);
-    // Add the todo to Firestore (you'll need to implement this function)
-    await addTodoToFirestore(todoToAdd);
+  const addTodo = async (newTodo: Omit<Todo, 'id' | 'createdAt' | 'completedAt' | 'userId'>) => {
+    try {
+      const id = await saveTodoToFirestore(newTodo);
+      const todoToAdd = { ...newTodo, id, createdAt: Date.now(), completedAt: null, userId: user!.uid };
+      setTodos([...todos, todoToAdd]);
+    } catch (error) {
+      console.error("Error adding todo:", error);
+    }
   };
 
   const activeTodos = todos.filter(todo => !todo.completed);
   const completedTodos = todos.filter(todo => todo.completed);
 
+  if (!user) {
+    return (
+      <Container maxWidth="sm" sx={{ mt: 4 }}>
+        <Paper elevation={3} sx={{ p: 3, textAlign: 'center' }}>
+          <Typography variant="h5" gutterBottom>Welcome to Todo App</Typography>
+          <Button variant="contained" onClick={handleSignIn}>Sign in with Google</Button>
+        </Paper>
+      </Container>
+    );
+  }
+
   return (
     <Container maxWidth="lg" sx={{ py: 2 }}>
-      <Typography variant="h4" component="h1" gutterBottom sx={{ mb: 2 }}>
-        Todo List
-      </Typography>
+      <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+        <Typography variant="h4" component="h1">Todo List</Typography>
+        <Button variant="outlined" onClick={handleSignOut}>Sign Out</Button>
+      </Box>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <Paper elevation={3} sx={{ p: 2, mb: 2 }}>
@@ -98,7 +105,7 @@ const App: React.FC = () => {
                 <TodoItem
                   key={todo.id}
                   todo={todo}
-                  onToggle={() => handleToggle(todo.id)}
+                  onToggle={() => handleToggle(todo.id!)}
                   onDelete={() => {/* Implement delete function */}}
                 />
               ))}
@@ -119,7 +126,7 @@ const App: React.FC = () => {
                       <TodoItem
                         key={todo.id}
                         todo={todo}
-                        onToggle={() => handleToggle(todo.id)}
+                        onToggle={() => handleToggle(todo.id!)}
                         onDelete={() => {/* Implement delete function */}}
                       />
                     ))}

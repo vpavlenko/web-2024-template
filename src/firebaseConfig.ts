@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBB7jz6eXcUT-vvMlW-vHVXlIVUBmetN9M",
@@ -12,8 +12,26 @@ const firebaseConfig = {
   measurementId: "G-W6CBWZW4F8"
 };
 
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-const analytics = getAnalytics(app);
+let app;
+let db;
+let auth;
 
-console.log("Firebase initialized");
+try {
+  app = initializeApp(firebaseConfig);
+  console.log("Firebase app initialized successfully");
+
+  db = getFirestore(app);
+  console.log("Firestore initialized");
+
+  auth = getAuth(app);
+  console.log("Auth initialized");
+
+  // Uncomment the following line if you want to use the local emulator
+  // connectAuthEmulator(auth, "http://localhost:9099");
+
+  console.log("Firebase initialization complete");
+} catch (error) {
+  console.error("Error initializing Firebase:", error);
+}
+
+export { db, auth };
