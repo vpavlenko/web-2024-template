@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Grid, List, Typography, Paper, Divider, Box, Collapse, Button } from '@mui/material';
+import { Container, Grid, List, Typography, Paper, Box, Collapse, Button } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import TodoForm from './components/TodoForm';
@@ -7,7 +7,7 @@ import TodoItem from './components/TodoItem';
 import { Todo, updateTodoInFirestore, fetchTodosForCurrentUser, saveTodoToFirestore } from './firebaseUtils';
 import CompletionTimeChart from './components/CompletionTimeChart';
 import { auth } from './firebaseConfig';
-import { signInWithPopup, GoogleAuthProvider, User } from 'firebase/auth';
+import { signInWithPopup, GoogleAuthProvider, User, onAuthStateChanged } from 'firebase/auth';
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
       if (user) {
         fetchTodosForCurrentUser().then(setTodos).catch(console.error);
@@ -67,8 +67,8 @@ const App: React.FC = () => {
   const addTodo = async (newTodo: Omit<Todo, 'id' | 'createdAt' | 'completedAt' | 'userId'>) => {
     try {
       const id = await saveTodoToFirestore(newTodo);
-      const todoToAdd = { ...newTodo, id, createdAt: Date.now(), completedAt: null, userId: user!.uid };
-      setTodos([...todos, todoToAdd]);
+      const todoToAdd: Todo = { ...newTodo, id, createdAt: Date.now(), completedAt: null, userId: user!.uid };
+      setTodos(prevTodos => [...prevTodos, todoToAdd]);
     } catch (error) {
       console.error("Error adding todo:", error);
     }

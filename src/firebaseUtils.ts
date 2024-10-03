@@ -2,16 +2,15 @@ import { collection, addDoc, updateDoc, doc, query, where, getDocs } from 'fireb
 import { db, auth } from './firebaseConfig';
 
 export interface Todo {
-  id?: string;
+  id: string;
   title: string;
-  description: string;
   completed: boolean;
-  createdAt: number; // Unix timestamp
-  completedAt?: number; // Unix timestamp, optional
+  createdAt: number;
+  completedAt: number | null;
   userId: string;
 }
 
-export const saveTodoToFirestore = async (todo: Omit<Todo, 'id' | 'createdAt' | 'userId'>): Promise<string> => {
+export const saveTodoToFirestore = async (todo: Omit<Todo, 'id' | 'createdAt' | 'userId' | 'completedAt'>): Promise<string> => {
   const user = auth.currentUser;
   if (!user) throw new Error('User not authenticated');
 
@@ -19,6 +18,7 @@ export const saveTodoToFirestore = async (todo: Omit<Todo, 'id' | 'createdAt' | 
     ...todo,
     createdAt: Date.now(),
     userId: user.uid,
+    completedAt: null,
   };
   const docRef = await addDoc(collection(db, 'todos'), todoWithTimestamp);
   return docRef.id;
@@ -43,6 +43,6 @@ export const fetchTodosForCurrentUser = async (): Promise<Todo[]> => {
       ...data,
       id: doc.id,
       completedAt: data.completedAt || null,
-    };
+    } as Todo;
   });
 };

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { TextField, Button, Box } from '@mui/material';
-import { saveTodoToFirestore, Todo } from '../firebaseUtils';
+import { Todo } from '../firebaseUtils';
 
 interface TodoFormProps {
-  onAddTodo: (todo: Omit<Todo, 'id' | 'createdAt'>) => void;
+  onAddTodo: (todo: Omit<Todo, 'id' | 'createdAt' | 'completedAt' | 'userId'>) => void;
 }
 
 const TodoForm: React.FC<TodoFormProps> = ({ onAddTodo }) => {
@@ -13,14 +13,9 @@ const TodoForm: React.FC<TodoFormProps> = ({ onAddTodo }) => {
     event.preventDefault();
     if (!title.trim()) return;
 
-    try {
-      const newTodo = { title, description: '', completed: false };
-      const docId = await saveTodoToFirestore(newTodo);
-      onAddTodo({ ...newTodo, id: docId });
-      setTitle('');
-    } catch (error) {
-      console.error("Error saving todo:", error);
-    }
+    const newTodo = { title, completed: false };
+    onAddTodo(newTodo);
+    setTitle('');
   };
 
   return (

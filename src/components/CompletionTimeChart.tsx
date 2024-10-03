@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { Paper, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material';
-import { Todo } from '../types';
+import { Todo } from '../firebaseUtils';  // Update this import
 
 interface CompletionTimeChartProps {
   todos: Todo[];
@@ -36,7 +36,7 @@ const CompletionTimeChart: React.FC<CompletionTimeChartProps> = ({ todos }) => {
   }, [todos, timeRange]);
 
   const handleTimeRangeChange = (
-    event: React.MouseEvent<HTMLElement>,
+    _event: React.MouseEvent<HTMLElement>,
     newTimeRange: TimeRange,
   ) => {
     if (newTimeRange !== null) {

@@ -2,7 +2,7 @@ import React from 'react';
 import { ListItem, ListItemText, Checkbox, IconButton, Box, Typography } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { formatDistanceToNow } from 'date-fns';
-import { Todo } from '../types';
+import { Todo } from '../firebaseUtils';  // Update this import
 
 interface TodoItemProps {
   todo: Todo;
