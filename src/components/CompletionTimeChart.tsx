@@ -15,7 +15,7 @@ const CompletionTimeChart: React.FC<CompletionTimeChartProps> = ({ todos }) => {
   const chartData = useMemo(() => {
     const now = new Date();
     const startDate = new Date(now.getTime() - timeRange * 7 * 24 * 60 * 60 * 1000);
-    const completedTodos = todos.filter(todo => todo.completedAt && todo.completedAt >= startDate.getTime());
+    const completedTodos = todos.filter(todo => todo.completedAt && todo.completedAt >= startDate.getTime() && !todo.archived);
 
     const dateCounts: { [date: string]: number } = {};
     for (let d = new Date(startDate); d <= now; d.setDate(d.getDate() + 1)) {

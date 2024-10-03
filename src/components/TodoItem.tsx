@@ -1,16 +1,16 @@
 import React from 'react';
 import { ListItem, ListItemText, Checkbox, IconButton, Box, Typography } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
+import ArchiveIcon from '@mui/icons-material/Archive';
 import { formatDistanceToNow } from 'date-fns';
-import { Todo } from '../firebaseUtils';  // Update this import
+import { Todo } from '../firebaseUtils';
 
 interface TodoItemProps {
   todo: Todo;
   onToggle: () => void;
-  onDelete?: () => void;
+  onArchive: () => void;
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onDelete }) => {
+const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive }) => {
   const formatRelativeDate = (timestamp: number | null) => {
     if (!timestamp || isNaN(timestamp)) {
       return 'Unknown date';
@@ -32,9 +32,9 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onDelete }) => {
           <Typography variant="caption" color="text.secondary" sx={{ mr: 1 }}>
             {formatRelativeDate(todo.completed ? todo.completedAt : todo.createdAt)}
           </Typography>
-          {onDelete && (
-            <IconButton edge="end" aria-label="delete" onClick={onDelete} size="small">
-              <DeleteIcon />
+          {!todo.archived && (
+            <IconButton edge="end" aria-label="archive" onClick={onArchive} size="small">
+              <ArchiveIcon />
             </IconButton>
           )}
         </Box>

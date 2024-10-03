@@ -12,6 +12,7 @@ import { signInWithPopup, GoogleAuthProvider, User, onAuthStateChanged } from 'f
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [showCompleted, setShowCompleted] = useState(false);
+  const [showArchived, setShowArchived] = useState(false);
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
@@ -68,18 +69,39 @@ const App: React.FC = () => {
     }
   };
 
-  const addTodo = async (newTodo: Omit<Todo, 'id' | 'createdAt' | 'completedAt' | 'userId'>) => {
+  const addTodo = async (newTodo: Omit<Todo, 'id' | 'createdAt' | 'completedAt' | 'userId' | 'archived' | 'archivedAt'>) => {
     try {
       const id = await saveTodoToFirestore(newTodo);
-      const todoToAdd: Todo = { ...newTodo, id, createdAt: Date.now(), completedAt: null, userId: user!.uid };
+      const todoToAdd: Todo = { ...newTodo, id, createdAt: Date.now(), completedAt: null, userId: user!.uid, archived: false, archivedAt: null };
       setTodos(prevTodos => [...prevTodos, todoToAdd]);
     } catch (error) {
       console.error("Error adding todo:", error);
     }
   };
 
-  const activeTodos = todos.filter(todo => !todo.completed);
-  const completedTodos = todos.filter(todo => todo.completed);
+  const handleArchive = async (id: string) => {
+    try {
+      const todoToArchive = todos.find(todo => todo.id === id);
+      if (todoToArchive) {
+        const updatedTodo = { 
+          ...todoToArchive, 
+          archived: true,
+          archivedAt: Date.now()
+        };
+        await updateTodoInFirestore(id, { 
+          archived: updatedTodo.archived, 
+          archivedAt: updatedTodo.archivedAt 
+        });
+        setTodos(todos.map(todo => todo.id === id ? updatedTodo : todo));
+      }
+    } catch (error) {
+      console.error("Error archiving todo:", error);
+    }
+  };
+
+  const activeTodos = todos.filter(todo => !todo.completed && !todo.archived);
+  const completedTodos = todos.filter(todo => todo.completed && !todo.archived);
+  const archivedTodos = todos.filter(todo => todo.archived);
 
   if (!user) {
     return (
@@ -109,8 +131,8 @@ const App: React.FC = () => {
                 <TodoItem
                   key={todo.id}
                   todo={todo}
-                  onToggle={() => handleToggle(todo.id!)}
-                  onDelete={() => {/* Implement delete function */}}
+                  onToggle={() => handleToggle(todo.id)}
+                  onArchive={() => handleArchive(todo.id)}
                 />
               ))}
             </List>
@@ -130,8 +152,32 @@ const App: React.FC = () => {
                       <TodoItem
                         key={todo.id}
                         todo={todo}
-                        onToggle={() => handleToggle(todo.id!)}
-                        onDelete={() => {/* Implement delete function */}}
+                        onToggle={() => handleToggle(todo.id)}
+                        onArchive={() => handleArchive(todo.id)}
+                      />
+                    ))}
+                  </List>
+                </Collapse>
+              </>
+            )}
+            {archivedTodos.length > 0 && (
+              <>
+                <Button
+                  onClick={() => setShowArchived(!showArchived)}
+                  startIcon={showArchived ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                  fullWidth
+                  sx={{ mt: 2, mb: 1 }}
+                >
+                  {showArchived ? 'Hide' : 'Show'} archived todos ({archivedTodos.length})
+                </Button>
+                <Collapse in={showArchived}>
+                  <List disablePadding>
+                    {archivedTodos.map((todo) => (
+                      <TodoItem
+                        key={todo.id}
+                        todo={todo}
+                        onToggle={() => handleToggle(todo.id)}
+                        onArchive={() => {}} // Archived todos can't be archived again
                       />
                     ))}
                   </List>
@@ -141,7 +187,7 @@ const App: React.FC = () => {
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <CompletionTimeChart todos={todos} />
+          <CompletionTimeChart todos={todos.filter(todo => !todo.archived)} />
         </Grid>
       </Grid>
     </Container>
