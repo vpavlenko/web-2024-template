@@ -95,7 +95,7 @@ Then open the link it gives in your browser.
 
 ## Make changes
 
-Open `src/App.tsx`, then press Cmd+I (or Ctrl+I), then type your request. Eg.
+Open `src/App.tsx`, then press Cmd+I (or Ctrl+I), then type your request or paste a screenshot of a desired UI. Eg.
 ```
 Instead of a todo list app, make an app to store and edit recipes for dishes.
 Allow to recalculate number of portions for each dish.
