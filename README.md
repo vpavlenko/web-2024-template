@@ -95,6 +95,10 @@ Then open the link it gives in your browser.
 
 <img width="1005" alt="Screenshot 2024-10-02 at 11 52 29" src="https://github.com/user-attachments/assets/9fbff3f8-be54-43af-80f3-fc8ed846cf2c">
 
+On Windows, you may get errors for `npm` not being found. Try opening a "Command Prompt" type of terminal in Cursor and run `npm run dev` in it.
+
+If `npm` is still not found there, it usually means that your installation of Node.js hasn't added a path to `npm` to your PATH variable. Ask Cursor's Chat (or a GPT4/Claude.ai/Bing Copilot/Gemini) on how to debug that.
+
 ## Make changes
 
 Open `src/App.tsx`, then press Cmd+I (or Ctrl+I), then type your request or paste a screenshot of a desired UI. Eg.
