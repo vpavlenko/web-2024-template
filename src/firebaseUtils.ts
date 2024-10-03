@@ -19,6 +19,7 @@ export const saveTodoToFirestore = async (todo: Omit<Todo, 'id' | 'createdAt'>):
   return docRef.id;
 };
 
-export const updateTodoInFirestore = async (id: string, updates: Partial<Todo>): Promise<void> => {
-  await updateDoc(doc(db, 'todos', id), updates);
+export const updateTodoInFirestore = async (id: string, updates: Partial<Todo>) => {
+  const todoRef = doc(db, 'todos', id);
+  await updateDoc(todoRef, updates);
 };

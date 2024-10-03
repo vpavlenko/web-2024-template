@@ -51,18 +51,23 @@ const App: React.FC = () => {
   }, []);
 
   const handleToggle = async (id: string) => {
-    const todoToToggle = todos.find(todo => todo.id === id);
-    if (todoToToggle) {
-      const updatedTodo = { 
-        ...todoToToggle, 
-        completed: !todoToToggle.completed,
-        completedAt: !todoToToggle.completed ? Date.now() : undefined
-      };
-      await updateTodoInFirestore(id, { 
-        completed: updatedTodo.completed, 
-        completedAt: updatedTodo.completedAt 
-      });
-      setTodos(todos.map(todo => todo.id === id ? updatedTodo : todo));
+    try {
+      const todoToToggle = todos.find(todo => todo.id === id);
+      if (todoToToggle) {
+        const updatedTodo = { 
+          ...todoToToggle, 
+          completed: !todoToToggle.completed,
+          completedAt: !todoToToggle.completed ? Date.now() : null // Change this line
+        };
+        await updateTodoInFirestore(id, { 
+          completed: updatedTodo.completed, 
+          completedAt: updatedTodo.completedAt 
+        });
+        setTodos(todos.map(todo => todo.id === id ? updatedTodo : todo));
+      }
+    } catch (error) {
+      console.error("Error toggling todo:", error);
+      // Optionally, show an error message to the user
     }
   };
 
