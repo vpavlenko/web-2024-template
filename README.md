@@ -215,6 +215,8 @@ const firebaseConfig = {
 9. Reload your app, make sure it has saved the data to the database.
 9. Open your database and try to see it there:
 
+<img width="850" alt="Screenshot 2024-10-03 at 16 17 23" src="https://github.com/user-attachments/assets/bb790a30-9ea0-4cfb-b4e7-ca068173e30b">
+
 
 10. If something breaks, ask Cursor to add a debug output for all Firebase requests.
 
