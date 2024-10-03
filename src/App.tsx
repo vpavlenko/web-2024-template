@@ -27,6 +27,10 @@ const App: React.FC = () => {
     return () => unsubscribe();
   }, []);
 
+  useEffect(() => {
+    document.title = "atm-todos";
+  }, []);
+
   const handleSignIn = async () => {
     const provider = new GoogleAuthProvider();
     try {
@@ -81,7 +85,7 @@ const App: React.FC = () => {
     return (
       <Container maxWidth="sm" sx={{ mt: 4 }}>
         <Paper elevation={3} sx={{ p: 3, textAlign: 'center' }}>
-          <Typography variant="h5" gutterBottom>Welcome to Todo App</Typography>
+          <Typography variant="h4" gutterBottom>Welcome to atm-todos</Typography>
           <Button variant="contained" onClick={handleSignIn}>Sign in with Google</Button>
         </Paper>
       </Container>
@@ -91,7 +95,7 @@ const App: React.FC = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 2 }}>
       <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-        <Typography variant="h4" component="h1">Todo List</Typography>
+        <Typography variant="h4" component="h1">atm-todos</Typography>
         <Button variant="outlined" onClick={handleSignOut}>Sign Out</Button>
       </Box>
       <Grid container spacing={2}>
