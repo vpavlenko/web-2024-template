@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Grid, List, Typography, Paper, Divider, Box } from '@mui/material';
+import { Container, Grid, List, Typography, Paper, Divider, Box, Collapse, Button } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import TodoForm from './components/TodoForm';
 import TodoItem from './components/TodoItem';
 import { collection, getDocs, updateDoc, doc } from 'firebase/firestore';
@@ -42,6 +44,7 @@ const fetchTodos = async () => {
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
+  const [showCompleted, setShowCompleted] = useState(false);
 
   useEffect(() => {
     fetchTodos().then(setTodos).catch(console.error);
@@ -71,6 +74,9 @@ const App: React.FC = () => {
     await addTodoToFirestore(todoToAdd);
   };
 
+  const activeTodos = todos.filter(todo => !todo.completed);
+  const completedTodos = todos.filter(todo => todo.completed);
+
   return (
     <Container maxWidth="lg" sx={{ py: 2 }}>
       <Typography variant="h4" component="h1" gutterBottom sx={{ mb: 2 }}>
@@ -83,7 +89,7 @@ const App: React.FC = () => {
           </Paper>
           <Box sx={{ maxHeight: 'calc(100vh - 300px)', overflowY: 'auto' }}>
             <List disablePadding>
-              {todos.map((todo) => (
+              {activeTodos.map((todo) => (
                 <TodoItem
                   key={todo.id}
                   todo={todo}
@@ -92,6 +98,30 @@ const App: React.FC = () => {
                 />
               ))}
             </List>
+            {completedTodos.length > 0 && (
+              <>
+                <Button
+                  onClick={() => setShowCompleted(!showCompleted)}
+                  startIcon={showCompleted ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                  fullWidth
+                  sx={{ mt: 2, mb: 1 }}
+                >
+                  {showCompleted ? 'Hide' : 'Show'} completed todos ({completedTodos.length})
+                </Button>
+                <Collapse in={showCompleted}>
+                  <List disablePadding>
+                    {completedTodos.map((todo) => (
+                      <TodoItem
+                        key={todo.id}
+                        todo={todo}
+                        onToggle={() => handleToggle(todo.id)}
+                        onDelete={() => {/* Implement delete function */}}
+                      />
+                    ))}
+                  </List>
+                </Collapse>
+              </>
+            )}
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
