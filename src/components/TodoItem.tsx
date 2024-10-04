@@ -45,8 +45,47 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive, onUnarch
     <ListItem
       dense
       disableGutters
-      secondaryAction={
-        <Box display="flex" alignItems="center">
+      sx={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', py: 1 }}
+    >
+      <Box display="flex" width="100%" alignItems="flex-start">
+        <Checkbox
+          edge="start"
+          checked={todo.completed}
+          onChange={onToggle}
+          size="small"
+        />
+        <Box flexGrow={1} mr={2}>
+          {isEditing ? (
+            <Box display="flex" alignItems="center" width="100%">
+              <TextField
+                fullWidth
+                multiline
+                value={editedTitle}
+                onChange={(e) => setEditedTitle(e.target.value)}
+                size="small"
+              />
+              <Button onClick={handleEditSubmit} size="small">Save</Button>
+            </Box>
+          ) : (
+            isExpanded ? (
+              <Typography
+                variant="body2"
+                sx={{
+                  whiteSpace: 'pre-line',
+                  width: '100%',
+                }}
+              >
+                {todo.title}
+              </Typography>
+            ) : (
+              <ListItemText
+                primary={firstLine}
+                primaryTypographyProps={{ variant: 'body2' }}
+              />
+            )
+          )}
+        </Box>
+        <Box display="flex" flexShrink={0} alignItems="center">
           <Typography variant="caption" color="text.secondary" sx={{ mr: 1 }}>
             {formatRelativeDate(todo.completed ? todo.completedAt : todo.createdAt)}
           </Typography>
@@ -72,44 +111,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive, onUnarch
             </>
           )}
         </Box>
-      }
-    >
-      <Checkbox
-        edge="start"
-        checked={todo.completed}
-        onChange={onToggle}
-        size="small"
-      />
-      {isEditing ? (
-        <Box display="flex" alignItems="center" width="100%">
-          <TextField
-            fullWidth
-            multiline
-            value={editedTitle}
-            onChange={(e) => setEditedTitle(e.target.value)}
-            size="small"
-          />
-          <Button onClick={handleEditSubmit} size="small">Save</Button>
-        </Box>
-      ) : (
-        isExpanded ? (
-          <Typography
-            variant="body2"
-            sx={{
-              whiteSpace: 'pre-line',
-              width: '100%',
-              paddingRight: 2, // Add some padding to prevent text from touching the icons
-            }}
-          >
-            {todo.title}
-          </Typography>
-        ) : (
-          <ListItemText
-            primary={firstLine}
-            primaryTypographyProps={{ variant: 'body2' }}
-          />
-        )
-      )}
+      </Box>
     </ListItem>
   );
 };
