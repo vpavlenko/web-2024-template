@@ -5,6 +5,7 @@ import UnarchiveIcon from '@mui/icons-material/Unarchive';
 import EditIcon from '@mui/icons-material/Edit';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import AddIcon from '@mui/icons-material/Add';
 import { formatDistanceToNow } from 'date-fns';
 import { Todo } from '../firebaseUtils';
 
@@ -14,9 +15,11 @@ interface TodoItemProps {
   onArchive: () => void;
   onUnarchive: () => void;
   onEdit: (id: string, newTitle: string) => void;
+  onAddChild: (parentId: string) => void;
+  depth: number;
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive, onUnarchive, onEdit }) => {
+const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive, onUnarchive, onEdit, onAddChild, depth }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedTitle, setEditedTitle] = useState(todo.title);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -45,7 +48,13 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive, onUnarch
     <ListItem
       dense
       disableGutters
-      sx={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', py: 1 }}
+      sx={{ 
+        display: 'flex', 
+        flexDirection: 'column', 
+        alignItems: 'stretch', 
+        py: 1,
+        pl: depth * 4, // Add indentation based on depth
+      }}
     >
       <Box display="flex" width="100%" alignItems="flex-start">
         <Checkbox
@@ -91,6 +100,9 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive, onUnarch
           </Typography>
           {!isEditing && (
             <>
+              <IconButton edge="end" aria-label="add child" onClick={() => onAddChild(todo.id)} size="small">
+                <AddIcon />
+              </IconButton>
               <IconButton edge="end" aria-label="edit" onClick={() => setIsEditing(true)} size="small">
                 <EditIcon />
               </IconButton>

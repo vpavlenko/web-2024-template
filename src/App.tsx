@@ -69,10 +69,10 @@ const App: React.FC = () => {
     }
   };
 
-  const addTodo = async (newTodo: Omit<Todo, 'id' | 'createdAt' | 'completedAt' | 'userId' | 'archived' | 'archivedAt'>) => {
+  const addTodo = async (newTodo: Omit<Todo, 'id' | 'createdAt' | 'completedAt' | 'archived'>) => {
     try {
       const id = await saveTodoToFirestore(newTodo);
-      const todoToAdd: Todo = { ...newTodo, id, createdAt: Date.now(), completedAt: null, userId: user!.uid, archived: false, archivedAt: null };
+      const todoToAdd: Todo = { ...newTodo, id, createdAt: Date.now(), completedAt: null, archived: false };
       setTodos(prevTodos => [...prevTodos, todoToAdd]);
     } catch (error) {
       console.error("Error adding todo:", error);
@@ -85,13 +85,9 @@ const App: React.FC = () => {
       if (todoToArchive) {
         const updatedTodo = { 
           ...todoToArchive, 
-          archived: true,
-          archivedAt: Date.now()
+          archived: true
         };
-        await updateTodoInFirestore(id, { 
-          archived: updatedTodo.archived, 
-          archivedAt: updatedTodo.archivedAt 
-        });
+        await updateTodoInFirestore(id, { archived: updatedTodo.archived });
         setTodos(todos.map(todo => todo.id === id ? updatedTodo : todo));
       }
     } catch (error) {
@@ -105,13 +101,9 @@ const App: React.FC = () => {
       if (todoToUnarchive) {
         const updatedTodo = { 
           ...todoToUnarchive, 
-          archived: false,
-          archivedAt: null
+          archived: false
         };
-        await updateTodoInFirestore(id, { 
-          archived: updatedTodo.archived, 
-          archivedAt: updatedTodo.archivedAt 
-        });
+        await updateTodoInFirestore(id, { archived: updatedTodo.archived });
         setTodos(todos.map(todo => todo.id === id ? updatedTodo : todo));
       }
     } catch (error) {
@@ -135,9 +127,48 @@ const App: React.FC = () => {
     }
   };
 
-  const activeTodos = todos.filter(todo => !todo.completed && !todo.archived);
-  const completedTodos = todos.filter(todo => todo.completed && !todo.archived);
-  const archivedTodos = todos.filter(todo => todo.archived);
+  const handleAddChild = async (parentId: string) => {
+    try {
+      const newChildTodo: Omit<Todo, 'id' | 'createdAt' | 'completedAt' | 'archived'> = {
+        title: 'New child todo',
+        completed: false,
+        parentId: parentId,
+        childIds: [],
+      };
+      const newChildId = await saveTodoToFirestore(newChildTodo);
+      const updatedTodos = todos.map(todo => 
+        todo.id === parentId 
+          ? { ...todo, childIds: [...(todo.childIds || []), newChildId] } 
+          : todo
+      );
+      setTodos([...updatedTodos, { ...newChildTodo, id: newChildId, createdAt: Date.now(), completedAt: null, archived: false }]);
+      await updateTodoInFirestore(parentId, { childIds: [...(todos.find(t => t.id === parentId)?.childIds || []), newChildId] });
+    } catch (error) {
+      console.error("Error adding child todo:", error);
+    }
+  };
+
+  const renderTodoItem = (todo: Todo, depth: number = 0) => (
+    <React.Fragment key={todo.id}>
+      <TodoItem
+        todo={todo}
+        onToggle={() => handleToggle(todo.id)}
+        onArchive={() => handleArchive(todo.id)}
+        onUnarchive={() => handleUnarchive(todo.id)}
+        onEdit={handleEdit}
+        onAddChild={handleAddChild}
+        depth={depth}
+      />
+      {todo.childIds && todo.childIds.length > 0 && todo.childIds.map(childId => {
+        const childTodo = todos.find(t => t.id === childId);
+        return childTodo ? renderTodoItem(childTodo, depth + 1) : null;
+      })}
+    </React.Fragment>
+  );
+
+  const activeTodos = todos.filter(todo => !todo.completed && !todo.archived && !todo.parentId);
+  const completedTodos = todos.filter(todo => todo.completed && !todo.archived && !todo.parentId);
+  const archivedTodos = todos.filter(todo => todo.archived && !todo.parentId);
 
   if (!user) {
     return (
@@ -163,16 +194,7 @@ const App: React.FC = () => {
           </Paper>
           <Box sx={{ maxHeight: 'calc(100vh - 300px)', overflowY: 'auto' }}>
             <List disablePadding>
-              {activeTodos.map((todo) => (
-                <TodoItem
-                  key={todo.id}
-                  todo={todo}
-                  onToggle={() => handleToggle(todo.id)}
-                  onArchive={() => handleArchive(todo.id)}
-                  onUnarchive={() => handleUnarchive(todo.id)}
-                  onEdit={handleEdit}
-                />
-              ))}
+              {activeTodos.map((todo) => renderTodoItem(todo))}
             </List>
             {completedTodos.length > 0 && (
               <>
@@ -186,15 +208,7 @@ const App: React.FC = () => {
                 </Button>
                 <Collapse in={showCompleted}>
                   <List disablePadding>
-                    {completedTodos.map((todo) => (
-                      <TodoItem
-                        key={todo.id}
-                        todo={todo}
-                        onToggle={() => handleToggle(todo.id)}
-                        onArchive={() => handleArchive(todo.id)}
-                        onUnarchive={() => handleUnarchive(todo.id)}
-                      />
-                    ))}
+                    {completedTodos.map((todo) => renderTodoItem(todo))}
                   </List>
                 </Collapse>
               </>
@@ -211,15 +225,7 @@ const App: React.FC = () => {
                 </Button>
                 <Collapse in={showArchived}>
                   <List disablePadding>
-                    {archivedTodos.map((todo) => (
-                      <TodoItem
-                        key={todo.id}
-                        todo={todo}
-                        onToggle={() => handleToggle(todo.id)}
-                        onArchive={() => {}} // Archived todos can't be archived again
-                        onUnarchive={() => handleUnarchive(todo.id)}
-                      />
-                    ))}
+                    {archivedTodos.map((todo) => renderTodoItem(todo))}
                   </List>
                 </Collapse>
               </>
