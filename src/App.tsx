@@ -19,7 +19,10 @@ const App: React.FC = () => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
       if (user) {
-        fetchTodosForCurrentUser().then(setTodos).catch(console.error);
+        fetchTodosForCurrentUser().then(fetchedTodos => {
+          console.log('Fetched todos:', fetchedTodos);
+          setTodos(fetchedTodos);
+        }).catch(console.error);
       } else {
         setTodos([]);
       }
@@ -53,16 +56,33 @@ const App: React.FC = () => {
     try {
       const todoToToggle = todos.find(todo => todo.id === id);
       if (todoToToggle) {
-        const updatedTodo = { 
-          ...todoToToggle, 
-          completed: !todoToToggle.completed,
-          completedAt: !todoToToggle.completed ? Date.now() : null
+        const newCompletedState = !todoToToggle.completed;
+        
+        const updateDescendants = (todoId: string, completed: boolean): Todo[] => {
+          return todos.map(todo => {
+            if (todo.id === todoId || (completed && todo.parentId === todoId)) {
+              const updatedTodo = {
+                ...todo,
+                completed,
+                completedAt: completed ? Date.now() : null
+              };
+              updateTodoInFirestore(todo.id, {
+                completed: updatedTodo.completed,
+                completedAt: updatedTodo.completedAt
+              }).catch(console.error);
+              return updatedTodo;
+            }
+            return todo;
+          });
         };
+
+        let updatedTodos = updateDescendants(id, newCompletedState);
+        setTodos(updatedTodos);
+
         await updateTodoInFirestore(id, { 
-          completed: updatedTodo.completed, 
-          completedAt: updatedTodo.completedAt 
+          completed: newCompletedState, 
+          completedAt: newCompletedState ? Date.now() : null 
         });
-        setTodos(todos.map(todo => todo.id === id ? updatedTodo : todo));
       }
     } catch (error) {
       console.error("Error toggling todo:", error);
@@ -73,7 +93,12 @@ const App: React.FC = () => {
     try {
       const id = await saveTodoToFirestore(newTodo);
       const todoToAdd: Todo = { ...newTodo, id, createdAt: Date.now(), completedAt: null, archived: false };
-      setTodos(prevTodos => [...prevTodos, todoToAdd]);
+      console.log('Adding todo:', todoToAdd);
+      setTodos(prevTodos => {
+        const updatedTodos = [...prevTodos, todoToAdd];
+        console.log('Updated todos state:', updatedTodos);
+        return updatedTodos;
+      });
     } catch (error) {
       console.error("Error adding todo:", error);
     }
@@ -166,9 +191,64 @@ const App: React.FC = () => {
     </React.Fragment>
   );
 
-  const activeTodos = todos.filter(todo => !todo.completed && !todo.archived && !todo.parentId);
-  const completedTodos = todos.filter(todo => todo.completed && !todo.archived && !todo.parentId);
-  const archivedTodos = todos.filter(todo => todo.archived && !todo.parentId);
+  const getAllParents = (todoId: string): Todo[] => {
+    const parents: Todo[] = [];
+    let currentTodo = todos.find(t => t.id === todoId);
+    while (currentTodo && currentTodo.parentId) {
+      const parent = todos.find(t => t.id === currentTodo.parentId);
+      if (parent) {
+        parents.push(parent);
+        currentTodo = parent;
+      } else {
+        break;
+      }
+    }
+    return parents;
+  };
+
+  const hasIncompleteDescendants = (todoId: string): boolean => {
+    const todo = todos.find(t => t.id === todoId);
+    if (!todo || !todo.childIds) return false;
+    return todo.childIds.some(childId => {
+      const child = todos.find(t => t.id === childId);
+      return child && (!child.completed || hasIncompleteDescendants(childId));
+    });
+  };
+
+  const filterTodos = (todos: Todo[], completed: boolean, archived: boolean, parentId: string | null = null) => {
+    let filteredTodos = todos.filter(todo => 
+      todo.completed === completed && 
+      todo.archived === archived &&
+      (parentId === null ? !todo.parentId : todo.parentId === parentId)
+    );
+
+    if (completed) {
+      // Add parents of completed todos
+      const parentsOfCompleted = filteredTodos.flatMap(todo => getAllParents(todo.id));
+      filteredTodos = [...new Set([...filteredTodos, ...parentsOfCompleted])];
+
+      // Add incomplete children with incomplete descendants
+      const incompleteChildren = todos.filter(todo => 
+        !todo.completed && 
+        !todo.archived && 
+        todo.parentId && 
+        filteredTodos.some(ft => ft.id === todo.parentId) &&
+        hasIncompleteDescendants(todo.id)
+      );
+      filteredTodos = [...filteredTodos, ...incompleteChildren];
+    }
+
+    return filteredTodos;
+  };
+
+  const activeTodos = filterTodos(todos, false, false, null);
+  const completedTodos = filterTodos(todos, true, false, null);
+  const archivedTodos = todos.filter(todo => todo.archived);
+
+  console.log('Render - All todos:', todos);
+  console.log('Render - Active todos:', activeTodos);
+  console.log('Render - Completed todos:', completedTodos);
+  console.log('Render - Archived todos:', archivedTodos);
 
   if (!user) {
     return (
@@ -208,7 +288,18 @@ const App: React.FC = () => {
                 </Button>
                 <Collapse in={showCompleted}>
                   <List disablePadding>
-                    {completedTodos.map((todo) => renderTodoItem(todo))}
+                    {completedTodos.map((todo) => (
+                      <TodoItem
+                        key={todo.id}
+                        todo={todo}
+                        onToggle={() => handleToggle(todo.id)}
+                        onArchive={() => handleArchive(todo.id)}
+                        onUnarchive={() => handleUnarchive(todo.id)}
+                        onEdit={handleEdit}
+                        onAddChild={handleAddChild}
+                        depth={getAllParents(todo.id).length}
+                      />
+                    ))}
                   </List>
                 </Collapse>
               </>
