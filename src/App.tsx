@@ -59,24 +59,32 @@ const App: React.FC = () => {
         const newCompletedState = !todoToToggle.completed;
         
         const updateDescendants = (todoId: string, completed: boolean): Todo[] => {
-          return todos.map(todo => {
-            if (todo.id === todoId || (completed && todo.parentId === todoId)) {
-              const updatedTodo = {
+          let updatedTodos = [...todos];
+          const updateTodo = (id: string) => {
+            const index = updatedTodos.findIndex(t => t.id === id);
+            if (index !== -1) {
+              const todo = updatedTodos[index];
+              updatedTodos[index] = {
                 ...todo,
                 completed,
                 completedAt: completed ? Date.now() : null
               };
               updateTodoInFirestore(todo.id, {
-                completed: updatedTodo.completed,
-                completedAt: updatedTodo.completedAt
+                completed: updatedTodos[index].completed,
+                completedAt: updatedTodos[index].completedAt
               }).catch(console.error);
-              return updatedTodo;
+              
+              if (todo.childIds) {
+                todo.childIds.forEach(childId => updateTodo(childId));
+              }
             }
-            return todo;
-          });
+          };
+          
+          updateTodo(todoId);
+          return updatedTodos;
         };
 
-        let updatedTodos = updateDescendants(id, newCompletedState);
+        const updatedTodos = updateDescendants(id, newCompletedState);
         setTodos(updatedTodos);
 
         await updateTodoInFirestore(id, { 
@@ -173,24 +181,6 @@ const App: React.FC = () => {
     }
   };
 
-  const renderTodoItem = (todo: Todo, depth: number = 0) => (
-    <React.Fragment key={todo.id}>
-      <TodoItem
-        todo={todo}
-        onToggle={() => handleToggle(todo.id)}
-        onArchive={() => handleArchive(todo.id)}
-        onUnarchive={() => handleUnarchive(todo.id)}
-        onEdit={handleEdit}
-        onAddChild={handleAddChild}
-        depth={depth}
-      />
-      {todo.childIds && todo.childIds.length > 0 && todo.childIds.map(childId => {
-        const childTodo = todos.find(t => t.id === childId);
-        return childTodo ? renderTodoItem(childTodo, depth + 1) : null;
-      })}
-    </React.Fragment>
-  );
-
   const renderTodoItemWithChildren = (todo: Todo, depth: number = 0) => (
     <React.Fragment key={todo.id}>
       <TodoItem
@@ -212,7 +202,7 @@ const App: React.FC = () => {
   const getAllParents = (todoId: string): Todo[] => {
     const parents: Todo[] = [];
     let currentTodo = todos.find(t => t.id === todoId);
-    while (currentTodo && currentTodo.parentId) {
+    while (currentTodo?.parentId) {
       const parent = todos.find(t => t.id === currentTodo.parentId);
       if (parent) {
         parents.push(parent);
@@ -292,7 +282,7 @@ const App: React.FC = () => {
           </Paper>
           <Box sx={{ maxHeight: 'calc(100vh - 300px)', overflowY: 'auto' }}>
             <List disablePadding>
-              {activeTodos.map((todo) => renderTodoItem(todo))}
+              {activeTodos.map((todo) => renderTodoItemWithChildren(todo))}
             </List>
             {completedTodos.length > 0 && (
               <>
@@ -323,7 +313,7 @@ const App: React.FC = () => {
                 </Button>
                 <Collapse in={showArchived}>
                   <List disablePadding>
-                    {archivedTodos.map((todo) => renderTodoItem(todo))}
+                    {archivedTodos.map((todo) => renderTodoItemWithChildren(todo))}
                   </List>
                 </Collapse>
               </>
