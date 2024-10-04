@@ -119,6 +119,22 @@ const App: React.FC = () => {
     }
   };
 
+  const handleEdit = async (id: string, newTitle: string) => {
+    try {
+      const todoToEdit = todos.find(todo => todo.id === id);
+      if (todoToEdit) {
+        const updatedTodo = { 
+          ...todoToEdit, 
+          title: newTitle
+        };
+        await updateTodoInFirestore(id, { title: newTitle });
+        setTodos(todos.map(todo => todo.id === id ? updatedTodo : todo));
+      }
+    } catch (error) {
+      console.error("Error editing todo:", error);
+    }
+  };
+
   const activeTodos = todos.filter(todo => !todo.completed && !todo.archived);
   const completedTodos = todos.filter(todo => todo.completed && !todo.archived);
   const archivedTodos = todos.filter(todo => todo.archived);
@@ -154,6 +170,7 @@ const App: React.FC = () => {
                   onToggle={() => handleToggle(todo.id)}
                   onArchive={() => handleArchive(todo.id)}
                   onUnarchive={() => handleUnarchive(todo.id)}
+                  onEdit={handleEdit}
                 />
               ))}
             </List>

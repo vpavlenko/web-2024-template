@@ -3,7 +3,7 @@ import { TextField, Button, Box } from '@mui/material';
 import { Todo } from '../firebaseUtils';
 
 interface TodoFormProps {
-  onAddTodo: (todo: Omit<Todo, 'id' | 'createdAt' | 'completedAt' | 'userId'>) => void;
+  onAddTodo: (todo: Omit<Todo, 'id' | 'createdAt' | 'completedAt' | 'userId' | 'archived' | 'archivedAt'>) => void;
 }
 
 const TodoForm: React.FC<TodoFormProps> = ({ onAddTodo }) => {
@@ -19,15 +19,17 @@ const TodoForm: React.FC<TodoFormProps> = ({ onAddTodo }) => {
   };
 
   return (
-    <Box component="form" onSubmit={handleSubmit} display="flex" alignItems="center">
+    <Box component="form" onSubmit={handleSubmit} display="flex" flexDirection="column">
       <TextField
         fullWidth
+        multiline
+        rows={3}
         variant="outlined"
         size="small"
         label="New Todo"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        style={{ marginRight: '10px' }}
+        style={{ marginBottom: '10px' }}
       />
       <Button type="submit" variant="contained" color="primary">
         Add
