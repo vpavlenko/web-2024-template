@@ -191,6 +191,24 @@ const App: React.FC = () => {
     </React.Fragment>
   );
 
+  const renderTodoItemWithChildren = (todo: Todo, depth: number = 0) => (
+    <React.Fragment key={todo.id}>
+      <TodoItem
+        todo={todo}
+        onToggle={() => handleToggle(todo.id)}
+        onArchive={() => handleArchive(todo.id)}
+        onUnarchive={() => handleUnarchive(todo.id)}
+        onEdit={handleEdit}
+        onAddChild={handleAddChild}
+        depth={depth}
+      />
+      {todo.childIds && todo.childIds.length > 0 && todo.childIds.map(childId => {
+        const childTodo = todos.find(t => t.id === childId);
+        return childTodo ? renderTodoItemWithChildren(childTodo, depth + 1) : null;
+      })}
+    </React.Fragment>
+  );
+
   const getAllParents = (todoId: string): Todo[] => {
     const parents: Todo[] = [];
     let currentTodo = todos.find(t => t.id === todoId);
@@ -288,18 +306,7 @@ const App: React.FC = () => {
                 </Button>
                 <Collapse in={showCompleted}>
                   <List disablePadding>
-                    {completedTodos.map((todo) => (
-                      <TodoItem
-                        key={todo.id}
-                        todo={todo}
-                        onToggle={() => handleToggle(todo.id)}
-                        onArchive={() => handleArchive(todo.id)}
-                        onUnarchive={() => handleUnarchive(todo.id)}
-                        onEdit={handleEdit}
-                        onAddChild={handleAddChild}
-                        depth={getAllParents(todo.id).length}
-                      />
-                    ))}
+                    {completedTodos.map((todo) => renderTodoItemWithChildren(todo, getAllParents(todo.id).length))}
                   </List>
                 </Collapse>
               </>
