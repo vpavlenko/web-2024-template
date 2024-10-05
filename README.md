@@ -41,15 +41,19 @@ in any of them in one click or by typing.
 ```
 <img width="599" alt="Screenshot 2024-10-02 at 13 06 38" src="https://github.com/user-attachments/assets/6df0cba6-da1f-4ec2-8f01-d9d1434a0aab">
 
+If that fails for some reason, create a new file `index.html` in Cursor, open it, then repeat the generation.
+
 
 
 4. Click `[Accept All]`. Trust Cursor, don't read the code that it generated – it's not relevant for this task:
 <img width="874" alt="Screenshot 2024-10-02 at 13 07 19" src="https://github.com/user-attachments/assets/1db29fba-8814-4290-ad67-4830d9315301">
 
-5. Open this file `index.html` in your browser (File -> Open):
+5. Open this file `index.html` in your browser.
+   - In Chrome/Firefox/Safari select `File -> Open` or press `Cmd/Ctrl+O`.
+   - To see where this file is on your computer, hover over its name in the left pane.
 <img width="588" alt="Screenshot 2024-10-02 at 13 10 37" src="https://github.com/user-attachments/assets/75d2b489-c4bd-4c70-9f60-8fb3b52d3e40">
 
-6. In the same Composer chat, ask for changes:
+7. In the same Composer chat, ask for changes:
 
 ```
 Make a solid-looking modern UI, draw real clock faces for each,
