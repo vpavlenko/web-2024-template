@@ -74,7 +74,7 @@ Again, click `[Accept All]` when available and refresh your page in the browser:
 
 
 
-## Get the tools ready
+## Version 2: a React app. Get the tools ready
 
 1. Go here -> [and install Node.js](https://nodejs.org/en/download/prebuilt-installer) version 20
    - On Windows, do it directly to Windows, NOT to WSL-Ubuntu.
@@ -99,7 +99,10 @@ Then open the link it gives in your browser.
 
 <img width="1005" alt="Screenshot 2024-10-02 at 11 52 29" src="https://github.com/user-attachments/assets/9fbff3f8-be54-43af-80f3-fc8ed846cf2c">
 
-On Windows, you may get errors for `npm` not being found. Try opening a "Command Prompt" type of terminal in Cursor and run `npm run dev` in it.
+On Windows, you may get errors for `npm` not being found. Try opening a "Command Prompt" type of terminal in Cursor and run `npm run dev` in it:
+
+![photo_2024-10-09_16-53-07](https://github.com/user-attachments/assets/088e8782-a9d0-46b1-a1cd-56f2d1120d0d)
+
 
 If `npm` is still not found there, it usually means that your installation of Node.js hasn't added a path to `npm` to your PATH variable. Ask Cursor's Chat (or a GPT4/Claude.ai/Bing Copilot/Gemini) on how to debug that.
 
