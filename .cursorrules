@@ -8,6 +8,7 @@ Code Style and Structure
 - Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
 - Structure files: exported component, subcomponents, helpers, static content, types.
 - Importing React from "react" is unnecessary and should be avoided.
+- If you add any param for API key, create a separate file for them, import API keys from it and don't rewrite API keys entered by the user.
 
 Naming Conventions
 
