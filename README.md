@@ -49,7 +49,7 @@ If that fails for some reason, create a new file `index.html` in Cursor, open it
 <img width="874" alt="Screenshot 2024-10-02 at 13 07 19" src="https://github.com/user-attachments/assets/1db29fba-8814-4290-ad67-4830d9315301">
 
 5. Open this file `index.html` in your browser.
-   - In Chrome/Firefox/Safari select `File -> Open` or press `Cmd/Ctrl+O`.
+   - In Chrome/Firefox/Safari select `File -> Open` or press `Cmd+O` (`Ctrl+O`).
    - To see where this file is on your computer, hover over its name in the left pane.
 <img width="588" alt="Screenshot 2024-10-02 at 13 10 37" src="https://github.com/user-attachments/assets/75d2b489-c4bd-4c70-9f60-8fb3b52d3e40">
 
