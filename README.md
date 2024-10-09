@@ -276,16 +276,3 @@ Next time write a commit message right in the message box:
 <img width="252" alt="Screenshot 2024-10-02 at 15 54 23" src="https://github.com/user-attachments/assets/1fd00da2-1d3b-456f-b8f9-66d4d66982f8">
 
 
-
-# Backup
-
-4. Type `git` to your terminal. If git is not found, install [git](https://git-scm.com/downloads)
-6. If you never committed to git on this machine, run in the terminal with your own name and email:
-```
-git config --global user.name "Your Name"
-```
-and
-```
-git config --global user.email "youremail@example.com"
-```
-
