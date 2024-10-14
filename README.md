@@ -23,9 +23,10 @@ This guide will take around 1 to 2 hours of your time.
   * [Adding Firestore to the project](#adding-firestore-to-the-project)
 - [How to create a Telegram bot?](#how-to-create-a-telegram-bot)
 - [Troubleshooting](#troubleshooting)
-    + [Git authenticity](#git-authenticity)
-    + [Empty commit message](#empty-commit-message)
-- [Backup](#backup)
+  * [Git authenticity](#git-authenticity)
+  * [Empty commit message](#empty-commit-message)
+  * [First time Git configuration](#first-time-git-configuration)
+
 
 
 ## A simple html app
