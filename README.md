@@ -276,4 +276,17 @@ Next time write a commit message right in the message box:
 
 <img width="252" alt="Screenshot 2024-10-02 at 15 54 23" src="https://github.com/user-attachments/assets/1fd00da2-1d3b-456f-b8f9-66d4d66982f8">
 
+### First time Git configuration
+
+If you see this:
+
+![photo_2024-10-14_13-42-25](https://github.com/user-attachments/assets/4b8179fd-9d88-4cc4-a87b-79db4d00ba19)
+
+Then open any terminal and enter these two lines, modifying their values with your personal data. This marks commits wherever you push your code - most likely, on Github:
+```
+git config --global user.email "YOUR_EMAIL@gmail.com"
+```
+```
+git config --global user.name "JANE DOE"
+```
 
