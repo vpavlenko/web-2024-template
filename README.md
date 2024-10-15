@@ -9,7 +9,6 @@ This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor
 This guide will take around 1 to 2 hours of your time.
 
 
-- [Off-topic: concepts](#off-topic--concepts)
 - [A simple html app](#a-simple-html-app)
 - [A React app](#a-react-app)
   * [Get the tools ready](#get-the-tools-ready)
@@ -21,7 +20,7 @@ This guide will take around 1 to 2 hours of your time.
   * [Tips](#tips)
   * [React vs Vanilla JS](#react-vs-vanilla-js)
 - [This is so tough, can I do it simpler?](#this-is-so-tough--can-i-do-it-simpler)
-- [Do I need a backend?](#do-i-need-a-backend-)
+- [Do I need a backend?](#do-i-need-a-backend)
   * [Adding Firestore to the project](#adding-firestore-to-the-project)
 - [How to create a Telegram bot?](#how-to-create-a-telegram-bot)
 - [Troubleshooting](#troubleshooting)
@@ -29,11 +28,7 @@ This guide will take around 1 to 2 hours of your time.
     + [Empty commit message](#empty-commit-message)
     + [First time Git configuration](#first-time-git-configuration)
 
-# Off-topic: concepts
 
-This tutorial exploits many concepts that may be less clear to non-programmers. You **don't need** to understand them to complete this tutorial. However, if you wish to understand them deeper, consult an LLM of your choice: 
-- [simple html vs React](https://chatgpt.com/share/670e3c1b-bc88-800f-959a-7ff1b8c7ec9d)
-- [git and deployment](https://chatgpt.com/share/670e3d41-dc34-800f-ae6b-c181e6b06cb7)
 
 
 # A simple html app
@@ -41,7 +36,7 @@ This tutorial exploits many concepts that may be less clear to non-programmers. 
 Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file.
 
 1. Install [Cursor IDE](https://www.cursor.com/), select any options during installation, then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update
-3. As you're in a `.cursortutor` project (or in any other empty folder opened as a project), press `Cmd/Ctrl+I` and ask Cursor to make a **simple html website**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
+3. As you're in a `.cursortutor` project (or in any other empty folder opened as a project), press `Cmd/Ctrl+I` and ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
 ```
 Create a simple html website with easy conversion between 7 main time zones.
 Time in all of theme is displayed simultaneously, and I can change hh and mm
@@ -80,6 +75,12 @@ Again, click `[Accept All]` when available and refresh your page in the browser:
 
 
 # A React app
+
+Now we'll make a new app from scratch using a modern, more scalable approach - by using a React framework and a handy tooling around it: TypeScript and Vite.
+
+Instructions below exploit many concepts that may be less clear to non-programmers. You **don't need** to understand them to complete this tutorial. However, if you wish to understand them deeper, consult an LLM of your choice: 
+- [simple html vs React](https://chatgpt.com/share/670e3c1b-bc88-800f-959a-7ff1b8c7ec9d)
+- [git and deployment](https://chatgpt.com/share/670e3d41-dc34-800f-ae6b-c181e6b06cb7)
 
 ## Get the tools ready
 
