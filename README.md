@@ -46,6 +46,8 @@ in any of them in one click or by typing.
 
 If that fails for some reason, create a new file `index.html` in Cursor, open it, then repeat the generation.
 
+Hint: you can also drag'n'drop screenshots of a reference UI to the Composer and ask it to copy the existing style/functionality.
+
 4. Click `[Accept All]`. Trust Cursor, **don't read the code** that it generated – it's not relevant for this task:
 <img width="874" alt="Screenshot 2024-10-02 at 13 07 19" src="https://github.com/user-attachments/assets/1db29fba-8814-4290-ad67-4830d9315301">
 
@@ -152,7 +154,7 @@ Open `package.json` and run a deploy script:
 
 If you get errors during deployment, copy them from terminal, paste them to Cursor's Composer, and it'll try to fix. Then retry deploying until it succeeds.
 
-Then enable the website link on Github: uncheck and check back the ✅ `Use your GitHub Pages website`:
+Then refresh the browser tab with your Github repository. After it, enable the website link on Github: uncheck and check back the ✅ `Use your GitHub Pages website`:
 
 <img width="1086" alt="Screenshot 2024-09-30 at 22 14 15" src="https://github.com/user-attachments/assets/6fa99fc3-c359-4113-b328-7c5da738eb7c">
 
