@@ -213,7 +213,7 @@ If you simply want to persist data, ask Cursor to save data in local storage.
 
 If you need to persist it across users or devices, ask Cursor to use [Firestore](https://firebase.google.com/)
 
-If you need authorization, ask Cursor to use [Firebase Authentication](https://firebase.google.com/)
+If you need authorization, ask Cursor to use [Firebase Authentication](https://firebase.google.com/). I recommend you to start with just the Google authorization - it's the easiest to support in the long term.
 
 If you need a logic to process user's data on the backend - start with [Firebase Cloud Functions](https://firebase.google.com/)
 
