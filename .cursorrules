@@ -53,6 +53,7 @@ Debugging and Troubleshooting
 - Create a reusable debug component to display network requests and props/state values.
 - Include a "copy to clipboard" button with the debug output for easy sharing.
 - Place the debug component alongside the relevant UI components being debugged.
+- If you suspect we're hitting CORS-related network errors, use @https://corsproxy.io/ to wrap requests: const url = 'https://corsproxy.io/?' + encodeURIComponent('https://api.domain.com/...');
 
 State Management
 
