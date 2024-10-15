@@ -165,6 +165,8 @@ Then refresh the browser tab with your Github repository. After it, enable the w
 
 You should see your changes live.
 
+Hint: You don't need to deploy to test every single change - for that you can still run a `dev` script. Deploy when you made a new version.
+
 ## Bring your idea
 
 Now you can change this template into any front-end idea that you'd like to create. Depending on your feature set, you may or may not need a back-end - see below for suggestions.
