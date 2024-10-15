@@ -51,8 +51,6 @@ in any of them in one click or by typing.
 
 If that fails for some reason, create a new file `index.html` in Cursor, open it, then repeat the generation.
 
-
-
 4. Click `[Accept All]`. Trust Cursor, **don't read the code** that it generated – it's not relevant for this task:
 <img width="874" alt="Screenshot 2024-10-02 at 13 07 19" src="https://github.com/user-attachments/assets/1db29fba-8814-4290-ad67-4830d9315301">
 
