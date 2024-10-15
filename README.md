@@ -8,28 +8,35 @@ This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor
 
 This guide will take around 1 to 2 hours of your time.
 
-- [How to Cursor in React](#how-to-cursor-in-react)
-  * [A simple html app](#a-simple-html-app)
+
+- [Off-topic: concepts](#off-topic--concepts)
+- [A simple html app](#a-simple-html-app)
+- [A React app](#a-react-app)
   * [Get the tools ready](#get-the-tools-ready)
   * [Run locally](#run-locally)
   * [Make changes](#make-changes)
-  * [Save changes (commit)](#save-changes-commit)
+  * [Save changes (commit)](#save-changes--commit)
   * [Deploy](#deploy)
   * [Bring your idea](#bring-your-idea)
   * [Tips](#tips)
   * [React vs Vanilla JS](#react-vs-vanilla-js)
-- [This is so tough, can I do it simpler?](#this-is-so-tough-can-i-do-it-simpler)
-- [Do I need a backend?](#do-i-need-a-backend)
+- [This is so tough, can I do it simpler?](#this-is-so-tough--can-i-do-it-simpler)
+- [Do I need a backend?](#do-i-need-a-backend-)
   * [Adding Firestore to the project](#adding-firestore-to-the-project)
 - [How to create a Telegram bot?](#how-to-create-a-telegram-bot)
 - [Troubleshooting](#troubleshooting)
-  * [Git authenticity](#git-authenticity)
-  * [Empty commit message](#empty-commit-message)
-  * [First time Git configuration](#first-time-git-configuration)
+    + [Git authenticity](#git-authenticity)
+    + [Empty commit message](#empty-commit-message)
+    + [First time Git configuration](#first-time-git-configuration)
+
+# Off-topic: concepts
+
+This tutorial exploits many concepts that may be less clear to non-programmers. You **don't need** to understand them to complete this tutorial. However, if you wish to understand them deeper, consult an LLM of your choice: 
+- [simple html vs React](https://chatgpt.com/share/670e3c1b-bc88-800f-959a-7ff1b8c7ec9d)
+- [git and deployment](https://chatgpt.com/share/670e3d41-dc34-800f-ae6b-c181e6b06cb7)
 
 
-
-## A simple html app
+# A simple html app
 
 Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file.
 
@@ -74,8 +81,9 @@ Again, click `[Accept All]` when available and refresh your page in the browser:
 8. This was a simple single-file application. The true power of Cursor comes in instantly making changes throughout many files in a big project. This allows you to build complex features. For that, we need to use a React library and some tooling - which is what this template's files provide.
 
 
+# A React app
 
-## Version 2: a React app. Get the tools ready
+## Get the tools ready
 
 1. Go here -> [and install Node.js](https://nodejs.org/en/download/prebuilt-installer) version 20
    - On Windows, do it directly to Windows, NOT to WSL-Ubuntu.
@@ -86,7 +94,7 @@ Optionally watch [my stream in Russian](https://www.youtube.com/live/NVnHvsuc5Fc
 
 
 ## Run locally
-Fork this repo:
+Fork this very repo:
 
 <img width="1191" alt="Screenshot 2024-09-30 at 22 04 00" src="https://github.com/user-attachments/assets/9f31a473-30c9-4e3b-abc7-69edd4011459">
 
