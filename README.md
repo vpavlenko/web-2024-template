@@ -40,8 +40,8 @@ This tutorial exploits many concepts that may be less clear to non-programmers. 
 
 Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file.
 
-1. Install [Cursor IDE](https://www.cursor.com/), select any options during installation, then log in. If you had it installed before, Cmd+Shift+P "Attempt Update" to get the latest update
-3. As you're in a `.cursortutor` project (or in any other empty folder opened as a project), press `Cmd+I` (`Ctrl+I`) and ask Cursor to make a **simple html website**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
+1. Install [Cursor IDE](https://www.cursor.com/), select any options during installation, then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update
+3. As you're in a `.cursortutor` project (or in any other empty folder opened as a project), press `Cmd/Ctrl+I` and ask Cursor to make a **simple html website**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
 ```
 Create a simple html website with easy conversion between 7 main time zones.
 Time in all of theme is displayed simultaneously, and I can change hh and mm
@@ -57,7 +57,7 @@ If that fails for some reason, create a new file `index.html` in Cursor, open it
 <img width="874" alt="Screenshot 2024-10-02 at 13 07 19" src="https://github.com/user-attachments/assets/1db29fba-8814-4290-ad67-4830d9315301">
 
 5. Open this file `index.html` in your browser.
-   - In Chrome/Firefox/Safari select `File -> Open` or press `Cmd+O` (`Ctrl+O`).
+   - In Chrome/Firefox/Safari select `File -> Open` or press `Cmd/Ctrl+O`.
    - To see where this file is on your computer, hover over its name in the left pane.
 <img width="588" alt="Screenshot 2024-10-02 at 13 10 37" src="https://github.com/user-attachments/assets/75d2b489-c4bd-4c70-9f60-8fb3b52d3e40">
 
@@ -117,7 +117,7 @@ If `npm` is still not found there, it usually means that your installation of No
 
 ## Make changes
 
-Open `src/App.tsx`, then press Cmd+I (or Ctrl+I), then type your request or paste a screenshot of a desired UI. Eg.
+Open `src/App.tsx`, then press `Cmd/Ctrl+I`, then type your request or paste a screenshot of a desired UI. Eg.
 ```
 Instead of a todo list app, make an app to store and edit recipes for dishes.
 Allow to recalculate number of portions for each dish.
@@ -142,7 +142,7 @@ The UI here is annoying and humiliating, I know.
 
 You may also do it from GitHub Desktop. 
 
-If you're lost, open a Terminal, press Cmd+K (Ctrl+K) and describe what you want from Git in plain English.
+If you're lost, open a Terminal, press `Cmd/Ctrl+K` and describe what you want from Git in plain English.
 
 ## Deploy
 
@@ -259,7 +259,7 @@ const firebaseConfig = {
 
 1. Create an empty folder on your computer.
 2. File -> Open Folder it in Cursor.
-3. `Cmd+I` (`Ctrl+I`), type `create a simple telegram bot`.
+3. `Cmd/Ctrl+I`, type `create a simple telegram bot`.
    - Read carefully what it tells you to do
    - If something doesn't work, replace `pip` with `pip3` and `python` with `python3`
    - You need to kill (Ctrl+C) and rerun your `python3 bot.py` after every code change - since python scripts don't automatically reload after their code has been changed.
