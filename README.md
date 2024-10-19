@@ -177,13 +177,15 @@ Now you can change this template into any front-end idea that you'd like to crea
 
 - First two weeks of Cursor are free, unless you use it too much.
 - Break down new functionality into smallest possible bits. Don't bundle several unrelated features: if you get an error for one of them, you'll lose more time retrying
-- Once a Cursor made any small step in the right direction - commit
+- Once a Cursor made any small step in the right direction, immediatelly commit to save changes for the future
+- If you want to go back to a previous version of your source code, scroll up the Composer's chat and press `checkout` below any of Cursor's replies
 - Press "+" to start a new Composer and erase unnecessary previous context. Cursor knows what you did before because it looks into the current code
+- Cursor's context is limited: you can't mention a file that's 3 MB long
 - If Cursor broke things: either Reject All, press "+" and start from the last commit; or try 2-3 attempts at sending error messages to it and ask to fix
 - Use `@Codebase` and also mention all files that might have a relevant context
 - Ask Cursor to add a debug output and paste it to composer
 - Ask Cursor to add a debug UI at the right place in your application. Ask to print out all relevant app state there
-- Try attaching reference screenshots and mockups as images to Composer
+- Try attaching reference screenshots and mockups as images to Composer. Ask it to recreate a design based on a screenshot you've provided
 - Try building anything with OpenAI API, use `@OpenAI`
 - Use `@Docs` and `@Web`
 - [Search Youtube for tips](https://www.youtube.com/watch?v=1kPr1vy0-QY)
