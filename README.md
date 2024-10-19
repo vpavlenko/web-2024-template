@@ -178,6 +178,8 @@ Now you can change this template into any front-end idea that you'd like to crea
 - First two weeks of Cursor are free, unless you use it too much.
 - Break down new functionality into smallest possible bits. Don't bundle several unrelated features: if you get an error for one of them, you'll lose more time retrying
 - Once a Cursor made any small step in the right direction, immediatelly commit to save changes for the future
+- You may `··· -> Open composer as pane`. However, never open __CHAT__ instead:
+   <img width="675" alt="Screenshot 2024-10-19 at 14 32 38" src="https://github.com/user-attachments/assets/0ef8f876-8eb2-4798-9886-788796866da5">
 - If you want to go back to a previous version of your source code, scroll up the Composer's chat and press `checkout` below any of Cursor's replies
 - Press "+" to start a new Composer and erase unnecessary previous context. Cursor knows what you did before because it looks into the current code
 - Cursor's context is limited: you can't mention a file that's 3 MB long
