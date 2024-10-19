@@ -54,7 +54,7 @@ Hint: you can also drag'n'drop screenshots of a reference UI to the Composer and
 
 5. Open this file `index.html` in your browser. What? See below:
    - In Chrome/Firefox/Safari select `File -> Open` or press `Cmd/Ctrl+O`.
-   - To see where this file is on your computer, hover over its name in the left pane.
+   - To see where this file is on your computer, hover over its name in Cursor's left pane.
 <img width="588" alt="Screenshot 2024-10-02 at 13 10 37" src="https://github.com/user-attachments/assets/75d2b489-c4bd-4c70-9f60-8fb3b52d3e40">
 
 7. In the same Composer chat, ask for changes:
