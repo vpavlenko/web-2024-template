@@ -45,7 +45,7 @@ in any of them in one click or by typing.
 ```
 <img width="599" alt="Screenshot 2024-10-02 at 13 06 38" src="https://github.com/user-attachments/assets/6df0cba6-da1f-4ec2-8f01-d9d1434a0aab">
 
-If that fails for some reason, create a new file `index.html` in Cursor, open it, then repeat the generation.
+If that fails for some reason, create a new file `index.html` in Cursor, open it, then repeat the generation. This file will be added to the context - it'll be shown above the text box where you type instructions.
 
 Hint: you can also drag'n'drop screenshots of a reference UI to the Composer and ask it to copy the existing style/functionality.
 
