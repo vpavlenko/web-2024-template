@@ -36,7 +36,8 @@ This guide will take around 1 to 2 hours of your time.
 Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file.
 
 1. Install [Cursor IDE](https://www.cursor.com/), select any options during installation, then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update
-3. As you're in a `.cursortutor` project (or in any other empty folder opened as a project), press `Cmd/Ctrl+I` and ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
+3. Create an empty folder on your computer outside of Cursor. Then, in Cursor open it using `File -> Open Folder...`.
+4. Press `Cmd/Ctrl+I` and ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
 ```
 Create a simple html website with easy conversion between 7 main time zones.
 Time in all of theme is displayed simultaneously, and I can change hh and mm
