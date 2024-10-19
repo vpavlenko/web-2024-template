@@ -35,7 +35,7 @@ This guide will take around 1 to 2 hours of your time.
 
 Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file.
 
-1. Install [Cursor IDE](https://www.cursor.com/), select any options during installation, then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update
+1. Install [Cursor IDE](https://www.cursor.com/), **select any options during installation** (they don't matter), then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update
 3. Create an empty folder on your computer outside of Cursor. Then, in Cursor open it using `File -> Open Folder...`.
 4. Press `Cmd/Ctrl+I` and ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
 ```
