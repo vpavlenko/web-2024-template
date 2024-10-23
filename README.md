@@ -128,6 +128,9 @@ Populate with 5 boilerplate dishes.
 Make funky styling.
 ```
 
+<img width="1003" alt="Screenshot 2024-10-23 at 08 49 52" src="https://github.com/user-attachments/assets/c96e7fc5-d154-4413-adb6-4170d416f765">
+
+
 You can write your mother tounge (Spanish, Polish etc.) - it'll [understand](https://chatgpt.com/share/66fbdfda-a314-800f-997d-1cedbc9f4f92)
 
 Hit Enter, then once it's done - hit Acccept All and reload your live demo in the browser.
@@ -243,11 +246,11 @@ Save data to Firestore
 
 <img width="1089" alt="Screenshot 2024-10-03 at 15 43 31" src="https://github.com/user-attachments/assets/5973592c-af22-44d6-8ad3-2e22f36e26d4">
 
-8. Copy `firebaseConfig` to the file that Cursor created for it:
+7. Copy `firebaseConfig` to the file that Cursor created for it:
 
 ```js
 const firebaseConfig = {
-  apiKey: "AIzaNdPrtYYZO3Mo9gmNTQFwqI8fSdn-jKTuWA",
+  apiKey: "YOU_SHOULD_GET_THIS_KEY_AT_THE_PREVIOUS_STEP",
   authDomain: "your-app-43gh9.firebaseapp.com",
   projectId: "your-app-43gh9",
   storageBucket: "your-app-43gh9.appspot.com",
@@ -257,7 +260,7 @@ const firebaseConfig = {
 };
 ```
 
-9. Reload your app, make sure it has saved the data to the database.
+8. Reload your app, make sure it has saved the data to the database.
 9. Open your database and try to see it there:
 
 <img width="850" alt="Screenshot 2024-10-03 at 16 17 23" src="https://github.com/user-attachments/assets/bb790a30-9ea0-4cfb-b4e7-ca068173e30b">
