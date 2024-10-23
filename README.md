@@ -289,7 +289,7 @@ const firebaseConfig = {
 
 If you fail to select a **test mode** in the step 4, you need to go to Rules and allow all reads and writes:
 
-```
+```yaml
 rules_version = '2';
 
 service cloud.firestore {
