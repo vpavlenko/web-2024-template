@@ -282,7 +282,28 @@ const firebaseConfig = {
 
 <img width="850" alt="Screenshot 2024-10-03 at 16 17 23" src="https://github.com/user-attachments/assets/bb790a30-9ea0-4cfb-b4e7-ca068173e30b">
 
-10. If something breaks, ask Cursor to add a debug output for all Firebase requests.
+10. If something breaks, ask Cursor to add a debug output for all Firebase requests. Also, open a Console tab and a Network tab in your browser's Dev Tools and see if there are any errors in red.
+
+## Rules
+
+If you fail to select a **test mode** in the step 4, you need to go to Rules and allow all reads and writes:
+
+```
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+```
+
+<img width="857" alt="Screenshot 2024-10-23 at 09 35 50" src="https://github.com/user-attachments/assets/b761546e-272b-4c2b-86d0-78b3302bb95a">
+
+This will allow anyone in the internet to read or write (or erase) any data in your Firestore. If you need any protection - eg. via user authentication - ask a GPT4 to design a strategy of your data protection in Firebase using your authentication strategies, user roles in your app and data schema you have in your Firestore. 
+
 
 # How to create a Telegram bot?
 
