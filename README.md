@@ -178,7 +178,7 @@ Now you can change this template into any front-end idea that you'd like to crea
 
 ## Tips
 
-- First two weeks of Cursor are free, unless you use it too much.
+- First two weeks of Cursor are free, unless you use it too much. Can you start a new trial with another email like `youremail+1@gmail.com`? Depends on your attitude towards capitalism.
 - Break down new functionality into smallest possible bits. Don't bundle several unrelated features: if you get an error for one of them, you'll lose more time retrying
 - Once a Cursor made any small step in the right direction, immediatelly commit to save changes for the future
 - You may `··· -> Open composer as pane`. However, never open __CHAT__ instead:
