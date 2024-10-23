@@ -1,6 +1,6 @@
 # How to Cursor in React
 
-<img width="1527" alt="Screenshot 2024-10-23 at 09 21 41" src="https://github.com/user-attachments/assets/98bff411-e1e5-4de1-affe-dde8a27920f9">
+![379113570-98bff411-e1e5-4de1-affe-dde8a27920f9 copy](https://github.com/user-attachments/assets/95aa1733-f495-4871-a2c1-fe4e6c0bc54f)
 
 [8 year old girl codes with Cursor AI](https://www.youtube.com/watch?v=o5uvDZ8srHA)
 
