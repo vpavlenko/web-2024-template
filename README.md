@@ -35,7 +35,7 @@ This guide will take around 1 to 2 hours of your time.
 
 Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file.
 
-1. Install [Cursor IDE](https://www.cursor.com/), **select any options during installation** (they don't matter), then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update.
+1. Install [Cursor IDE](https://www.cursor.com/), **select any options during installation** (they don't matter + you can change them afterwards), then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update.
    > This tutorial assumes you use either Cursor's free trial (first two weeks on a new account) or Cursor Pro. Yes, this tutorial promotes a paid product. If your free trial has expired, you may create a new account on a new email
 3. Create an empty folder on your computer outside of Cursor. Then, in Cursor open it using `File -> Open Folder...`.
 4. Press `Cmd/Ctrl+I` and ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
@@ -97,7 +97,7 @@ Optionally watch [my stream in Russian](https://www.youtube.com/live/NVnHvsuc5Fc
 
 
 ## Run locally
-Fork this very repo:
+Fork this very repo (say what? see screenshots below):
 
 <img width="1191" alt="Screenshot 2024-09-30 at 22 04 00" src="https://github.com/user-attachments/assets/9f31a473-30c9-4e3b-abc7-69edd4011459">
 
@@ -154,9 +154,9 @@ Open `package.json` and run a deploy script:
 <img width="822" alt="Screenshot 2024-10-02 at 21 08 37" src="https://github.com/user-attachments/assets/facd4e44-17e5-4bb6-a762-310a6e6bd28c">
 
 
-If you get errors during deployment, copy them from terminal, paste them to Cursor's Composer, and it'll try to fix. Then retry deploying until it succeeds.
+If you get errors during deployment, copy all of them from terminal (`Ctrl/Cmd+A` `Ctrl/Cmd+C` `Ctrl/Cmd+V), paste them to Cursor's Composer, ask `fix` (it won't generate for an empty prompt), and it'll try to fix. Then retry deploying until it succeeds: Run Script `deploy`, check if there are errors, copy. It should say `Published` when it succeeds.
 
-Then refresh the browser tab with your Github repository. After it, enable the website link on Github: uncheck and check back the ✅ `Use your GitHub Pages website`:
+Then **refresh the browser tab with your fork**. After the refresh, enable the website link on Github: uncheck and check back the ✅ `Use your GitHub Pages website`:
 
 <img width="1086" alt="Screenshot 2024-09-30 at 22 14 15" src="https://github.com/user-attachments/assets/6fa99fc3-c359-4113-b328-7c5da738eb7c">
 
