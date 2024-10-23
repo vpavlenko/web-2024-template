@@ -97,11 +97,17 @@ Optionally watch [my stream in Russian](https://www.youtube.com/live/NVnHvsuc5Fc
 
 
 ## Run locally
-Fork this very repo (say what? see screenshots below):
+Fork this very repo (say what? see a screenshot below):
+
+> A fork is your own complete copy of this repo that's stored on Github. You save code changes to it. Git and Github help you not to lose any interim code state, should you wish to roll back to it at any time.
 
 <img width="1191" alt="Screenshot 2024-09-30 at 22 04 00" src="https://github.com/user-attachments/assets/9f31a473-30c9-4e3b-abc7-69edd4011459">
 
-Then clone it locally using [GitHub Desktop](https://desktop.github.com/download/)
+
+Then clone it locally using [GitHub Desktop](https://desktop.github.com/download/). To do that, install it and log into your Github account using `File -> Options` `Sign into Github.com`. As you see `yourusername/web-2024-template` in the list of repos, press `Clone`, then select `For my own purposes`:
+
+![Screenshot_5 (2)](https://github.com/user-attachments/assets/d27adef4-6004-4db3-92a4-a29ad62fdaec)
+
 
 Then open this project (`web-2024-template`) in Cursor (`File -> Open Folder...`), open `package.json`, hover `dev` on line 7 and click `Run Script`:
 
@@ -300,6 +306,9 @@ Next time write a commit message right in the message box:
 ### First time Git configuration
 
 If you see this:
+
+![Screenshot_6](https://github.com/user-attachments/assets/12e1d0cc-38f6-4ac8-a2af-c129ee0d9f5f)
+
 
 ![photo_2024-10-14_13-42-25](https://github.com/user-attachments/assets/4b8179fd-9d88-4cc4-a87b-79db4d00ba19)
 
