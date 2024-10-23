@@ -106,6 +106,8 @@ Fork this very repo (say what? see a screenshot below):
 
 Then clone it locally using [GitHub Desktop](https://desktop.github.com/download/). To do that, install it and log into your Github account using `File -> Options` `Sign into Github.com`. As you see `yourusername/web-2024-template` in the list of repos, press `Clone`, then select `For my own purposes`:
 
+> A clone is your copy of a source code from Github servers to your local computer. Your repo's home is online at Github servers. You can clone it from many of your computers. If your repo is public, everyone can fork and clone it. You can make it private.
+
 ![Screenshot_5 (2)](https://github.com/user-attachments/assets/d27adef4-6004-4db3-92a4-a29ad62fdaec)
 
 
