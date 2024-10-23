@@ -26,6 +26,7 @@ This guide will take around 1 to 2 hours of your time.
 - [This is so tough, can I do it simpler?](#this-is-so-tough-can-i-do-it-simpler)
 - [Do I need a backend?](#do-i-need-a-backend)
   * [Adding Firestore to the project](#adding-firestore-to-the-project)
+  * [Rules](#rules)
 - [How to create a Telegram bot?](#how-to-create-a-telegram-bot)
 - [Troubleshooting](#troubleshooting)
     + [Git authenticity](#git-authenticity)
