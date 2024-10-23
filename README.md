@@ -264,7 +264,7 @@ Save data to Firestore
 
 <img width="1089" alt="Screenshot 2024-10-03 at 15 43 31" src="https://github.com/user-attachments/assets/5973592c-af22-44d6-8ad3-2e22f36e26d4">
 
-7. Copy `firebaseConfig` to the file that Cursor created for it:
+7. A previous step should finally show you your own `firebaseConfig`. Copy it to the file that Cursor created for it:
 
 ```js
 const firebaseConfig = {
