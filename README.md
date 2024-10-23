@@ -1,5 +1,9 @@
 # How to Cursor in React
 
+<img width="1527" alt="Screenshot 2024-10-23 at 09 21 41" src="https://github.com/user-attachments/assets/98bff411-e1e5-4de1-affe-dde8a27920f9">
+
+[8 year old girl codes with Cursor AI](https://www.youtube.com/watch?v=o5uvDZ8srHA)
+
 In this guide you'll develop your own web application from scratch using plain English in the Cursor IDE. Cursor is the leading AI-powered code editor, capable of instantly making code changes in complex projects across multiple files.
 
 The development process is changing rapidly. Instead of learning programming languages and frameworks, you'll now need to carefully decompose projects into tasks, provide sufficient context to LLM helpers, and know how to recover from dead ends. Once you master this, you'll be able to start projects outside your area of expertise, even without any developers.
