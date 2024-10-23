@@ -238,10 +238,15 @@ If you need a logic to process user's data on the backend - start with [Firebase
 
 ## Adding Firestore to the project
 
-1. Ask Cursor:
+1. In your repo, ask Cursor to generate a code to save data to Firestore:
 ```
 Save data to Firestore
 ```
+
+<img width="527" alt="Screenshot 2024-10-23 at 09 18 21" src="https://github.com/user-attachments/assets/0d514359-b832-48dd-a369-7ad17bf086c4">
+
+
+
 2. Log into https://console.firebase.google.com/
 3. Create a project.
 4. Select "Cloud Firestore", create a database in **test mode**:
