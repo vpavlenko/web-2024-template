@@ -252,6 +252,15 @@ Save data to Firestore
 
 <img width="527" alt="Screenshot 2024-10-23 at 09 18 21" src="https://github.com/user-attachments/assets/0d514359-b832-48dd-a369-7ad17bf086c4">
 
+It will generate relevant code. Also, it'll tell you to run an installation command in the terminal - since you'll require a `firebase` library. You need to run this command manually in a new terminal - Cursor doesn't run any commands in your terminal on its own due to security reasons (i.e. to defer [an AI takeover](https://en.wikipedia.org/wiki/AI_takeover) by several weeks):
+
+<img width="527" alt="Screenshot 2024-10-23 at 09 59 52" src="https://github.com/user-attachments/assets/c4cb0691-4b8d-4b31-bf7d-4ca44cb8d7d0">
+
+<img width="875" alt="Screenshot 2024-10-23 at 10 00 22" src="https://github.com/user-attachments/assets/9dcdf084-e45d-4431-b63f-35f9144fea0f">
+
+
+<img width="879" alt="Screenshot 2024-10-23 at 10 00 42" src="https://github.com/user-attachments/assets/a845d6af-8a67-4afb-91ca-0c3e9d854e40">
+
 
 
 2. Log into https://console.firebase.google.com/
