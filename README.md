@@ -38,7 +38,7 @@ This guide will take around 1 to 2 hours of your time.
 
 # A simple html app
 
-Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file.
+Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file. **Don't fork, clone or open the repo locally yet** - in case you already know what that means.
 
 1. Install [Cursor IDE](https://www.cursor.com/), **select any options during installation** (they don't matter + you can change them afterwards), then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update.
    > This tutorial assumes you use either Cursor's free trial (first two weeks on a new account) or Cursor Pro. Yes, this tutorial promotes a paid product. If your free trial has expired, you may create a new account on a new email
