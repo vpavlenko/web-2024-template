@@ -1,4 +1,3 @@
-# How to Cursor in React
 
 ![379113570-98bff411-e1e5-4de1-affe-dde8a27920f9 copy](https://github.com/user-attachments/assets/95aa1733-f495-4871-a2c1-fe4e6c0bc54f)
 
@@ -38,7 +37,7 @@ This guide will take around 1 to 2 hours of your time.
 
 # A simple html app
 
-Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file. **Don't fork, clone or open the repo locally yet** - in case you already know what that means.
+Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file. **Don't fork, clone or open the repo locally yet** (in case you already know what that means).
 
 1. Install [Cursor IDE](https://www.cursor.com/), **select any options during installation** (they don't matter + you can change them afterwards), then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update.
    > This tutorial assumes you use either Cursor's free trial (first two weeks on a new account) or Cursor Pro. Yes, this tutorial promotes a paid product. If your free trial has expired, you may create a new account on a new email
@@ -63,7 +62,7 @@ Hint: you can also drag'n'drop screenshots of a reference UI to the Composer and
    - To see where this file is on your computer, hover over its name in Cursor's left pane.
 <img width="588" alt="Screenshot 2024-10-02 at 13 10 37" src="https://github.com/user-attachments/assets/75d2b489-c4bd-4c70-9f60-8fb3b52d3e40">
 
-7. In the same Composer chat, ask for changes:
+6. In the same Composer chat, ask for changes:
 
 ```
 Make a solid-looking modern UI, draw real clock faces for each,
@@ -96,6 +95,10 @@ Instructions below exploit many concepts that may be less clear to non-programme
 1. Go here -> [and install Node.js](https://nodejs.org/en/download/prebuilt-installer) version 20
    - On Windows, do it directly to Windows, NOT to WSL-Ubuntu.
    - Don't try installing via your package manager, or you can get an outdated Node version like v12. You need at least v18 for Vite.
+   - On Windows, **don't** "automatically install the necessary tools": ![dont](https://github.com/user-attachments/assets/4a6bf53a-05c9-436c-9663-64bc2b8fffeb)
+
+
+    
 5. [Log into Github](https://github.com/login)
 
 Optionally watch [my stream in Russian](https://www.youtube.com/live/NVnHvsuc5Fc)
