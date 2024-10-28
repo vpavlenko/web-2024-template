@@ -174,6 +174,8 @@ If you're lost, open a Terminal, press `Cmd/Ctrl+K` and describe what you want f
 
 Open `package.json` and run a deploy script:
 
+> When you "deploy", you make your website hosted in the internet so that it gets a direct link and becomes available for everyone to open in their browser, even when you turn your computer off.
+
 <img width="822" alt="Screenshot 2024-10-02 at 21 08 37" src="https://github.com/user-attachments/assets/facd4e44-17e5-4bb6-a762-310a6e6bd28c">
 
 
