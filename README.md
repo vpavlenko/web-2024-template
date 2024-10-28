@@ -160,6 +160,10 @@ Once you've changed anything, open <img width="263" alt="372839934-8672006e-9198
 
 **Once you wrote a message**, press `[Commit]`, then press `[Sync]`.
 
+If prompted like this, press "Always" for simplicity:
+
+
+
 The UI here is annoying and humiliating, I know. [You may fail](#empty-commit-message).
 
 You may also do it from GitHub Desktop. 
