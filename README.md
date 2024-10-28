@@ -158,7 +158,7 @@ See [troubleshooting](#troubleshooting) if anything fails.
 Once you've changed anything, open <img width="263" alt="372839934-8672006e-9198-4399-9169-0086bf01e961" src="https://github.com/user-attachments/assets/371824e8-420c-4143-8de1-b1b310d78cd5">
  in Cursor and **write a commit message** in the Message field (a short summary of your changes). Don't leave this field blank, type anything - like, `1`.
 
-**Once you wrote a message**, press `[Commit]`, then press `[Sync]`.
+**Once you wrote a message**, press `[Commit]`, then press `[🔄  Sync Changes ... ↑]`.
 
 If prompted like this, press "Always" for simplicity:
 
