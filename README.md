@@ -194,6 +194,11 @@ Then **refresh the browser tab with your fork**. After the refresh, enable the w
 
 You should see your changes live.
 
+Once your website is online, send its link to [me](https://t.me/vitalypavlenko) and please star [the original guide](https://github.com/vpavlenko/web-2024-template/):
+
+<img width="875" alt="Screenshot 2024-10-28 at 12 33 39" src="https://github.com/user-attachments/assets/c0702500-2a15-48e7-ad51-d2aad9167785">
+
+
 Hint: You don't need to deploy to test every single change - for that you can still run a `dev` script. Deploy when you made a new version.
 
 ## Bring your idea
