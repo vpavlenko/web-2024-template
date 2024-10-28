@@ -179,7 +179,9 @@ Open `package.json` and run a deploy script:
 <img width="822" alt="Screenshot 2024-10-02 at 21 08 37" src="https://github.com/user-attachments/assets/facd4e44-17e5-4bb6-a762-310a6e6bd28c">
 
 
-If you get errors during deployment, copy all of them from terminal (`Ctrl/Cmd+A` `Ctrl/Cmd+C` `Ctrl/Cmd+V), paste them to Cursor's Composer, ask `fix` (it won't generate for an empty prompt), and it'll try to fix. Then retry deploying until it succeeds: Run Script `deploy`, check if there are errors, copy. It should say `Published` when it succeeds.
+If you get errors during deployment, copy all of them from terminal (`Ctrl/Cmd+A` `Ctrl/Cmd+C` `Ctrl/Cmd+V`), paste them to Cursor's Composer, ask `fix` (it won't generate for an empty prompt), and it'll try to fix. Then retry deploying until it succeeds: Run Script `deploy`, check if there are errors, copy. It should say `Published` when it succeeds.
+
+Alternatively, try closing Cursor and opening it again.
 
 Then **refresh the browser tab with your fork**. After the refresh, enable the website link on Github: uncheck and check back the ✅ `Use your GitHub Pages website`:
 
