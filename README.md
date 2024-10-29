@@ -163,6 +163,7 @@ Once you've changed anything, open <img width="263" alt="372839934-8672006e-9198
 
 If prompted like this, press "Always" for simplicity:
 
+<img width="752" alt="Screenshot 2024-10-29 at 11 45 24" src="https://github.com/user-attachments/assets/3be87335-563b-4dd4-8080-9398f299470a">
 
 
 The UI here is annoying and humiliating, I know. [You may fail](#empty-commit-message).
