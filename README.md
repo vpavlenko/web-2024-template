@@ -201,7 +201,7 @@ Once your website is online, send its link to [me](https://t.me/vitalypavlenko) 
 <img width="875" alt="Screenshot 2024-10-28 at 12 33 39" src="https://github.com/user-attachments/assets/c0702500-2a15-48e7-ad51-d2aad9167785">
 
 
-Hint: You don't need to deploy to test every single change - for that you can still run a `dev` script. Deploy when you made a new version.
+Hint: You don't need to deploy to test every single change - for that you can still run a `dev` script. Deploy when you made a new version that's tested and is ready to replace the old one.
 
 ## Bring your idea
 
