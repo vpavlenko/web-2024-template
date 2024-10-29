@@ -39,10 +39,11 @@ This guide will take around 1 to 2 hours of your time.
 
 Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file. **Don't fork, clone or open the repo locally yet** (in case you already know what that means).
 
-1. Install [Cursor IDE](https://www.cursor.com/), **select any options during installation** (they don't matter + you can change them afterwards), then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update.
-   > This tutorial assumes you use either Cursor's free trial (first two weeks on a new account) or Cursor Pro. Yes, this tutorial promotes a paid product. If your free trial has expired, you may create a new account on a new email
+1. Install [Cursor IDE](https://www.cursor.com/), **select any options during the first run** (you can change them afterwards in `Settings... -> Cursor Settings`), then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update.
+   > This tutorial assumes you use either Cursor's free trial (first two weeks on a new account, limited to 50 requests in total) or Cursor Pro ($20/month). Yes, this tutorial is built around a paid product. Not ready to pay? If your free trial has expired, you may create a new account using a new email (or a `youremail+1@gmail.com` - notice the [plus hack](https://medium.com/verses-education/an-easy-gmail-hack-for-signing-up-multiple-user-accounts-that-require-an-email-address-4aba56e29248)) - and your trial will likely restart
 3. Create an empty folder on your computer outside of Cursor. Then, in Cursor open it using `File -> Open Folder...`.
-4. Press `Cmd/Ctrl+I` and ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.):
+   > The first run opens `.cursor-tutor` folder - you may well just work inside it. To locate it on your computer, hover over its name in Cursor - the tooltip will show you the path to it.
+5. Press `Cmd/Ctrl+I` and ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.) - it may perform on par with English or worse. Here is the example, feel free to ask for _your own website idea_ at this very stage:
 ```
 Create a simple html website with easy conversion between 7 main time zones.
 Time in all of theme is displayed simultaneously, and I can change hh and mm
