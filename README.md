@@ -150,7 +150,7 @@ Make funky styling.
 
 You can write your mother tounge (Spanish, Polish etc.) - it'll [understand](https://chatgpt.com/share/66fbdfda-a314-800f-997d-1cedbc9f4f92)
 
-Hit Enter, then once it's done - hit Acccept All and reload your live demo in the browser.
+Hit Enter, then once it's done - click `[Acccept All]` and reload your live demo in the browser.
 
 ## Save changes (commit)
 
