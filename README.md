@@ -37,7 +37,7 @@ This guide will take around 1 to 2 hours of your time.
 
 First, try https://bolt.new/
 
-Then, try Replit Agent.
+Then, try Replit Agent. (Ask me privately for credentials.)
 
 Then come back and read on.
 
