@@ -33,7 +33,13 @@ This guide will take around 1 to 2 hours of your time.
     + [First time Git configuration](#first-time-git-configuration)
 
 
+# Agents
 
+First, try https://bolt.new/
+
+Then, try Replit Agent.
+
+Then come back and read on.
 
 # A simple html app
 
