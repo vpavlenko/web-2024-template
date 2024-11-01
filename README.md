@@ -134,7 +134,9 @@ Then open the link it gives in your browser.
 
 <img width="1005" alt="Screenshot 2024-10-02 at 11 52 29" src="https://github.com/user-attachments/assets/9fbff3f8-be54-43af-80f3-fc8ed846cf2c">
 
-On Windows, you may get errors for `npm` not being found. Try opening a "Command Prompt" type of terminal in Cursor and run `npm run dev` in it:
+On Windows, you may get errors for `npm` not being found.
+   - Restart Cursor after installing Node.js
+   - Try opening a "Command Prompt" type of terminal in Cursor and run `npm run dev` in it. If it works, you may configure "Command Prompt" as your default Terminal Profile in Cursor:
 
 ![photo_2024-10-09_16-53-07](https://github.com/user-attachments/assets/088e8782-a9d0-46b1-a1cd-56f2d1120d0d)
 
@@ -143,9 +145,9 @@ If `npm` is still not found there, it usually means that your installation of No
 
 ## Make changes
 
-Open `src/App.tsx`, then press `Cmd/Ctrl+I`, then type your request or paste a screenshot of a desired UI. Eg.
+Open `src/App.tsx`, then press `Cmd/Ctrl+I`, then type your request or paste a screenshot of a desired UI. **Use `@Codebase` to help Cursor find all relevant files.** Eg.
 ```
-Instead of a todo list app, make an app to store and edit recipes for dishes.
+@Codebase Instead of a todo list app, make an app to store and edit recipes for dishes.
 Allow to recalculate number of portions for each dish.
 Populate with 5 boilerplate dishes.
 Make funky styling.
