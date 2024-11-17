@@ -33,6 +33,10 @@ This guide will take around 1 to 2 hours of your time.
     + [First time Git configuration](#first-time-git-configuration)
 
 
+# Idea
+
+Come up with an idea of a web application that you'll try to develop today. You may look at your browser history, look at apps in your phone, or type single letters to a browser search box ('a', 'b', 'c' etc.) to see which websites you're actually using a lot.
+
 # Agents
 
 First, try https://bolt.new/
