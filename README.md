@@ -40,11 +40,13 @@ Come up with an idea of a web application that you'll try to develop today. You 
 
 # Agents
 
-First, try https://bolt.new/
+First, try https://bolt.new/ . If you get stuck on a blank screen:
+- try using Chrome instead of Firefox
+- ask in the chat "I see the blank screen, please fix"
 
 Then, try Replit Agent. (Ask me privately for credentials.)
 
-Then come back and read on.
+Then come back and read further instructions. The rest of the workshop is about Cursor. It's a lower-level tool - it's not an AI agent. However, in practice it's more useful, once you learn to use it.
 
 # A simple html app
 
