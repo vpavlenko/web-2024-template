@@ -11,6 +11,7 @@ This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor
 
 This guide will take around 1 to 2 hours of your time.
 
+- [Idea](#idea)
 - [Agents](#agents)
 - [A simple html app](#a-simple-html-app)
 - [A React app](#a-react-app)
