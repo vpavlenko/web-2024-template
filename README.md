@@ -13,6 +13,8 @@ This guide will take around 1 to 2 hours of your time.
 
 - [Idea](#idea)
 - [Agents](#agents)
+  * [Bolt](#bolt)
+  * [Replit Agent](#replit-agent)
 - [A simple html app](#a-simple-html-app)
 - [A React app](#a-react-app)
   * [Get the tools ready](#get-the-tools-ready)
@@ -23,7 +25,6 @@ This guide will take around 1 to 2 hours of your time.
   * [Bring your idea](#bring-your-idea)
   * [Tips](#tips)
   * [React vs Vanilla JS](#react-vs-vanilla-js)
-- [This is so tough, can I do it simpler?](#this-is-so-tough-can-i-do-it-simpler)
 - [Do I need a backend?](#do-i-need-a-backend)
   * [Adding Firestore to the project](#adding-firestore-to-the-project)
   * [Rules](#rules)
@@ -38,17 +39,31 @@ This guide will take around 1 to 2 hours of your time.
 
 Come up with an idea of a web application that you'll try to develop today. You may look at your browser history, look at apps in your phone, or type single letters to a browser search box ('a', 'b', 'c' etc.) to see which websites you're actually using a lot.
 
+Write down the description for your application in a file - you'll copy-paste this prompt to several tools to compare results.
+
 # Agents
 
-First, try https://bolt.new/ . If you get stuck on a blank screen:
+First, we're gonna try two agents: Bolt and Replit Agent. Both look great at first, however, they may quickly fail and disappoint.
+
+## Bolt
+
+First, try https://bolt.new/: paste your prompt directly to the main input box. You'll probably need to sign up for it to work.
+
+If you get stuck on a blank screen:
 - try using Chrome instead of Firefox
 - ask in the chat "I see the blank screen, please fix"
+- do it several times
 
-Then, try Replit Agent. (Ask me privately for credentials.)
+Free tokens deplete after ~5 prompts a day. Once you ran out of them, go to the next step.
 
-Then come back and read further instructions. The rest of the workshop is about Cursor. It's a lower-level tool - it's not an AI agent. However, in practice it's more useful, once you learn to use it.
+## Replit Agent
+
+Then, try Replit Agent. It doesn't have a free trial. Ask me privately for credentials.
+
 
 # A simple html app
+
+The rest of the workshop is about Cursor. It's a lower-level tool - it's not an AI agent. However, in practice it's more useful, once you learn to use it.
 
 Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file. **Don't fork, clone or open the repo locally yet** (in case you already know what that means).
 
@@ -257,12 +272,6 @@ LLMs take the long generation for granted. However, that doesn't mean it's alway
 
 So I'd still bet on that with React+TypeScript you'll be able to integrate whatever you need - modern UI kits, payment processing, maps, animations, nav, charts, drag&drop, optimistic updates, dynamic loading - easier and faster.
 
-
-# This is so tough, can I do it simpler?
-
-You can try [Replit Agent](https://docs.replit.com/replitai/agent), although this will cost you $25 (no free trial). UX/vision-wise, it's mind-blowing. However, I can't get any meaningful results out of it so far. Also, it's heavily leaning towards Flask.
-
-Worth trying, but it's 2024, so LLMs can still be silly.
 
 
 
