@@ -174,7 +174,7 @@ Then clone it locally using [GitHub Desktop](https://desktop.github.com/download
 ![Screenshot_5 (2)](https://github.com/user-attachments/assets/d27adef4-6004-4db3-92a4-a29ad62fdaec)
 
 
-Then open this project (`web-2024-template`) in Cursor (`File -> Open Folder...`), open `package.json`, hover `dev` on line 7 and click `Run Script`:
+Then open this project (`web-2024-template`) in Cursor (`File -> Open Folder...`), open `package.json`, hover `dev` on line 7 and click `Run Script`. Don't hover `script` on line 6, hover `dev` on line 7 instead:
 
 <img width="616" alt="Screenshot 2024-10-02 at 11 49 15" src="https://github.com/user-attachments/assets/a75d0dd3-41a9-4730-a25b-b4accc867e09">
 
