@@ -12,7 +12,7 @@ This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor
 This guide will take around 1 to 2 hours of your time.
 
 - [Idea](#idea)
-- [Agents](#agents)
+- [Online IDEs](#online-ides)
   * [Bolt](#bolt)
   * [Replit Agent](#replit-agent)
 - [A simple html app](#a-simple-html-app)
@@ -37,17 +37,27 @@ This guide will take around 1 to 2 hours of your time.
 
 # Idea
 
-Come up with an idea of a web application that you'll try to develop today. You may look at your browser history, look at apps in your phone, or type single letters to a browser search box ('a', 'b', 'c' etc.) to see which websites you're actually using a lot.
+Come up with an idea of a web application that you'll try to develop today. You may look at your browser history, look at apps in your phone, or type single letters to a browser search box ('a', 'b', 'c' etc.) to see which websites you're actually using a lot. You may also google "ideas for web application", idk.
 
-Write down the description for your application in a file - you'll copy-paste this prompt to several tools to compare results.
+Write down a short one-line description of your application in a file - you'll copy-paste this prompt to several tools to compare results. Don't elaborate any details yet - LLMs are smart at making good guesses.
 
-# Agents
+# Online IDEs
 
-First, we're gonna try two agents: Bolt and Replit Agent. Both look great at first, however, they may quickly fail and disappoint.
+First, we're gonna try three online IDEs: v0.dev, Bolt and Replit Agent. They look great at first, however, they may quickly fail and disappoint. Good luck!
+
+## v0.dev
+
+Go to [v0.dev](https://v0.dev/) and sign up first. If the email doesn't work, create an account at [GitHub](https://github.com/signup) and sign up to v0 using your GitHub account.
+
+Once you've signed in, paste your idea into a text box.
+
+If the first version doesn't work at all, ask v0 to "fix" and describe how exactly it does not work. Remember: LLMs can't look at the screen as good as you can.
+
+Iterate several times: ask to add some features. Once you're bored, move on to next section. If you're not bored, don't stop :)
 
 ## Bolt
 
-First, try https://bolt.new/: paste your prompt directly to the main input box. You'll probably need to sign up for it to work.
+Then try https://bolt.new/: paste your prompt directly to the main input box. You'll probably need to sign up for it to work.
 
 If you get stuck on a blank screen:
 - try using Chrome instead of Firefox
@@ -63,12 +73,12 @@ Then, try Replit Agent. It doesn't have a free trial. Ask me privately for crede
 
 # A simple html app
 
-The rest of the workshop is about Cursor. It's a lower-level tool - it's not an AI agent. However, in practice it's more useful, once you learn to use it.
+The rest of the workshop is about Cursor. It's a lower-level tool - it's a standalone IDE, and you'll need to run your app on your own on your local computer. However, in practice it's more useful, once you learn how to use it.
 
 Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simple html website in a single `index.html` file. **Don't fork, clone or open the repo locally yet** (in case you already know what that means).
 
 1. Install [Cursor IDE](https://www.cursor.com/), **select any options during the first run** (you can change them afterwards in `Settings... -> Cursor Settings`), then log in. If you had it installed before, `Cmd/Ctrl+Shift+P` "Attempt Update" to get the latest update.
-   > This tutorial assumes you use either Cursor's free trial (first two weeks on a new account, limited to 50 requests in total) or Cursor Pro ($20/month). Yes, this tutorial is built around a paid product. Not ready to pay? If your free trial has expired, you may create a new account using a new email (or a `youremail+1@gmail.com` - notice the [plus hack](https://medium.com/verses-education/an-easy-gmail-hack-for-signing-up-multiple-user-accounts-that-require-an-email-address-4aba56e29248)) - and your trial will likely restart
+   > This tutorial assumes you use either Cursor's free trial (first two weeks on a new account, limited to 50 requests in total) or Cursor Pro ($20/month). Yes, this tutorial is built around a paid product. Not ready to pay? You may search for "cursor ide alternatives" and "cursor ide competitors" – there are ton of them, and you can jump between them for a while.
 3. Create an empty folder on your computer outside of Cursor. Then, in Cursor open it using `File -> Open Folder...`.
    > The first run opens `.cursor-tutor` folder - you may well just work inside it. To locate it on your computer, hover over its name in Cursor - the tooltip will show you the path to it.
 5. Press `Cmd/Ctrl+I` and ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.) - it may perform on par with English or worse. Here is the example, feel free to ask for _your own website idea_ at this very stage:
