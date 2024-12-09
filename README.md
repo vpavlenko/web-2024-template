@@ -3,7 +3,7 @@
 
 [8 year old girl codes with Cursor AI](https://www.youtube.com/watch?v=o5uvDZ8srHA)
 
-In this guide you'll develop your own web application from scratch using plain English in the Cursor IDE. Cursor is the leading AI-powered code editor, capable of instantly making code changes in complex projects across multiple files.
+In this guide you'll develop your own web application from scratch using plain English in various AI coding assistants. Cursor is the leading AI-powered code editor, capable of instantly making code changes in complex projects across multiple files.
 
 The development process is changing rapidly. Instead of learning programming languages and frameworks, you'll now need to carefully decompose projects into tasks, provide sufficient context to LLM helpers, and know how to recover from dead ends. Once you master this, you'll be able to start projects outside your area of expertise, even without any developers.
 
@@ -39,11 +39,11 @@ This guide will take around 1 to 2 hours of your time.
 
 Come up with an idea of a web application that you'll try to develop today. You may look at your browser history, look at apps in your phone, or type single letters to a browser search box ('a', 'b', 'c' etc.) to see which websites you're actually using a lot. You may also google "ideas for web application", idk.
 
-Write down a short one-line description of your application in a file - you'll copy-paste this prompt to several tools to compare results. Don't elaborate any details yet - LLMs are smart at making good guesses.
+Write down a short one-line description of your application in a file - you'll copy-paste this prompt to several tools to compare results. Start with "create a web application that ...". Don't elaborate all the details yet - LLMs are smart at making good guesses. 
 
 # Online IDEs
 
-First, we're gonna try four online IDEs: v0.dev, lovable.dev, Bolt and Replit Agent. They look great at first, however, they may quickly fail and disappoint. Good luck!
+First, we're gonna try five online tools: v0.dev, lovable.dev, Bolt, Replit Agent and Claude. They look great at first, however, they may quickly fail and disappoint. Good luck!
 
 ## v0.dev
 
@@ -76,7 +76,9 @@ Free tokens deplete after ~5 prompts a day. Once you ran out of them, go to the 
 
 Then, try Replit Agent. It doesn't have a free trial. Ask me privately for credentials.
 
-## Claude Artifacts
+## Claude
+
+Ask a https://claude.ai/ to make you a React app with your idea.
 
 https://madewithclaude.com/ - you may browse this gallery and remix something.
 
