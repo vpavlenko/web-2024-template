@@ -58,7 +58,7 @@ If the first version doesn't work at all, ask v0 to "fix" and describe how exact
 
 If you still have free requests, iterate several times: ask to add some features. Once you're bored, move on to next section. If you're not bored, don't stop :)
 
-Both v0.dev and Bolt are paid tools that only give you a few requests to try them out.
+These are all paid tools, so they'll give you only a few requests to try them out.
 
 ## lovable.dev
 
