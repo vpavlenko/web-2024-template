@@ -43,7 +43,7 @@ Write down a short one-line description of your application in a file - you'll c
 
 # Online IDEs
 
-First, we're gonna try three online IDEs: v0.dev, Bolt and Replit Agent. They look great at first, however, they may quickly fail and disappoint. Good luck!
+First, we're gonna try four online IDEs: v0.dev, lovable.dev, Bolt and Replit Agent. They look great at first, however, they may quickly fail and disappoint. Good luck!
 
 ## v0.dev
 
@@ -56,6 +56,10 @@ If the first version doesn't work at all, ask v0 to "fix" and describe how exact
 If you still have free requests, iterate several times: ask to add some features. Once you're bored, move on to next section. If you're not bored, don't stop :)
 
 Both v0.dev and Bolt are paid tools that only give you a few requests to try them out.
+
+## lovable.dev
+
+Do the same on https://lovable.dev/
 
 ## Bolt
 
@@ -71,6 +75,11 @@ Free tokens deplete after ~5 prompts a day. Once you ran out of them, go to the 
 ## Replit Agent
 
 Then, try Replit Agent. It doesn't have a free trial. Ask me privately for credentials.
+
+## Claude Artifacts
+
+https://madewithclaude.com/ - you may browse this gallery and remix something.
+
 
 
 # A simple html app
