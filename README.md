@@ -97,7 +97,7 @@ Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simp
    > This tutorial assumes you use either Cursor's free trial (first two weeks on a new account, limited to 50 requests in total) or Cursor Pro ($20/month). Yes, this tutorial is built around a paid product. Not ready to pay? You may search for "cursor ide alternatives" and "cursor ide competitors" – there are tons of them, and you can jump between free versions of them for a while.
 3. Create an empty folder on your computer outside of Cursor. Then, in Cursor open it using `File -> Open Folder...`.
    > The first run opens `.cursor-tutor` folder - you may well just work inside it. To locate it on your computer, hover over its name in Cursor - the tooltip will show you the path to it.
-5. Press `Cmd/Ctrl+I` to open a Composer and ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.) - it may perform on par with English or worse. Here is the example, feel free to ask for _your own website idea_ at this very stage:
+5. Press `Cmd/Ctrl+I` to open a Composer. Select **agent** in the "normal / agent" picker at the bottom. Ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Paste your own idea here - the one you've tried all other tools with. Try asking in your language (Spanish, Polish etc.) - it may perform on par with English or worse. Here is the example, feel free to ask for _your own website idea_ at this very stage:
 ```
 Create a simple html website with easy conversion between 7 main time zones.
 Time in all of theme is displayed simultaneously, and I can change hh and mm
