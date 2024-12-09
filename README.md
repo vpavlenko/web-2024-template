@@ -53,7 +53,9 @@ Once you've signed in, paste your idea into a text box.
 
 If the first version doesn't work at all, ask v0 to "fix" and describe how exactly it does not work. Remember: LLMs can't look at the screen as good as you can.
 
-Iterate several times: ask to add some features. Once you're bored, move on to next section. If you're not bored, don't stop :)
+If you still have free requests, iterate several times: ask to add some features. Once you're bored, move on to next section. If you're not bored, don't stop :)
+
+Both v0.dev and Bolt are paid tools that only give you a few requests to try them out.
 
 ## Bolt
 
