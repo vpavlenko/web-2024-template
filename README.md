@@ -146,7 +146,7 @@ Optionally watch [my stream in Russian](https://www.youtube.com/live/NVnHvsuc5Fc
 
 
 ## Run locally
-Fork this very repo (say what? see a screenshot below):
+Scroll this page all the way up and fork this very repo (say what? see a screenshot below):
 
 > A fork is your own complete copy of this repo that's stored on Github. You save code changes to it. Git and Github help you not to lose any interim code state, should you wish to roll back to it at any time.
 
