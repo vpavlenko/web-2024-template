@@ -9,7 +9,7 @@ The development process is changing rapidly. Instead of learning programming lan
 
 This React+TypeScript+Vite+MUI template allows you to run it locally in a Cursor IDE. Replace it with your logic and deploy to web.
 
-This guide will take around 1 to 2 hours of your time.
+This guide will take around 1 to 4 hours of your time.
 
 - [Idea](#idea)
 - [Online IDEs](#online-ides)
