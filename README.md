@@ -13,8 +13,11 @@ This guide will take around 1 to 4 hours of your time.
 
 - [Idea](#idea)
 - [Online IDEs](#online-ides)
+  * [v0.dev](#v0dev)
+  * [lovable.dev](#lovabledev)
   * [Bolt](#bolt)
   * [Replit Agent](#replit-agent)
+  * [Claude](#claude)
 - [A simple html app](#a-simple-html-app)
 - [A React app](#a-react-app)
   * [Get the tools ready](#get-the-tools-ready)
