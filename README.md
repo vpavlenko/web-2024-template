@@ -97,7 +97,7 @@ Before we dive into React, let's spend 10-20 minutes in a simpler setup - a simp
    > This tutorial assumes you use either Cursor's free trial (first two weeks on a new account, limited to 50 requests in total) or Cursor Pro ($20/month). Yes, this tutorial is built around a paid product. Not ready to pay? You may search for "cursor ide alternatives" and "cursor ide competitors" – there are tons of them, and you can jump between free versions of them for a while.
 3. Create an empty folder on your computer outside of Cursor. Then, in Cursor open it using `File -> Open Folder...`.
    > The first run opens `.cursor-tutor` folder - you may well just work inside it. To locate it on your computer, hover over its name in Cursor - the tooltip will show you the path to it.
-5. Press `Cmd/Ctrl+I` and ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.) - it may perform on par with English or worse. Here is the example, feel free to ask for _your own website idea_ at this very stage:
+5. Press `Cmd/Ctrl+I` to open a Composer and ask Cursor to make a _simple html website_. **Include the words `simple html website` in your prompt**. Ask for any functionality and UI. Try asking in your language (Spanish, Polish etc.) - it may perform on par with English or worse. Here is the example, feel free to ask for _your own website idea_ at this very stage:
 ```
 Create a simple html website with easy conversion between 7 main time zones.
 Time in all of theme is displayed simultaneously, and I can change hh and mm
@@ -193,9 +193,9 @@ If `npm` is still not found there, it usually means that your installation of No
 
 ## Make changes
 
-Open `src/App.tsx`, then press `Cmd/Ctrl+I`, then type your request or paste a screenshot of a desired UI. **Use `@Codebase` to help Cursor find all relevant files.** Eg.
+Open `src/App.tsx`, then press `Cmd/Ctrl+I` to open a Composer, then type your request or paste a screenshot of a desired UI.
 ```
-@Codebase Instead of a todo list app, make an app to store and edit recipes for dishes.
+Instead of a todo list app, make an app to store and edit recipes for dishes.
 Allow to recalculate number of portions for each dish.
 Populate with 5 boilerplate dishes.
 Make funky styling.
